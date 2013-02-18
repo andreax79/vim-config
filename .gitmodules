@@ -21,4 +21,4 @@
 	url = git://github.com/nvie/vim-togglemouse.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
-	url = git@github.com:flazz/vim-colorschemes.git
+	url = git://github.com/flazz/vim-colorschemes.git
