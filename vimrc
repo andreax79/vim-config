@@ -48,3 +48,7 @@ set list
 set undodir=~/.vim/undodir
 
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+
+colorscheme lucius
+set fillchars+=vert:\ 
+
