@@ -48,7 +48,12 @@ set list
 set undodir=~/.vim/undodir
 
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nnoremap <F4> :execute 'NERDTreeToggle ' . getcwd()<CR>
+nnoremap <F5> :GundoToggle<CR>
+nnoremap <F11> :set list!<CR>
 
 colorscheme lucius
 set fillchars+=vert:\ 
 
+:set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+:set statusline=%<%f\ %y\ %h%m%r%=%-24.(F4.NERDTree\ \ F5.Gundo\ \ F11.Inv\ \ F12.Mouse\ \ %l,%c%V%)\ %P
