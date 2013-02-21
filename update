@@ -1,6 +1,9 @@
 #!/bin/bash -
-# Switch to the `~/.vim` directory, and fetch submodules:
+# Switch to the `~/.vim` directory
 cd ~/.vim
+# Pull
+git pull
+# Fetch submodules
 git submodule init
 git submodule update
 # Upgrade all bundled plugins
