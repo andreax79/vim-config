@@ -25,9 +25,9 @@
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "bundle/mru.vim"]
-	path = bundle/mru.vim
-	url = https://github.com/vim-scripts/mru.vim.git
 [submodule "bundle/EasyGrep"]
 	path = bundle/EasyGrep
 	url = git://github.com/vim-scripts/EasyGrep.git
+[submodule "bundle/mru.vim"]
+	path = bundle/mru.vim
+	url = https://github.com/andreax79/mru.vim.git
