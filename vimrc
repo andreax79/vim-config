@@ -92,3 +92,5 @@ let g:EasyGrepRecursive=1
 let g:EasyGrepSearchCurrentBufferDir=1
 let g:EasyGrepIgnoreCase=1
 let g:EasyGrepFilesToExclude='*.pyc,*.pyo,.svn,.git'
+
+let g:miniBufExplModSelTarget = 1
