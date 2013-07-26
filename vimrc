@@ -21,7 +21,6 @@ set encoding=utf-8
 set whichwrap=b,s,h,l
 set directory=~/tmp,/tmp,.
 set ruler
-set cursorline
 
 " search
 set infercase
@@ -40,6 +39,8 @@ set mouse=a                 " Automatically enable mouse usage"
 set noerrorbells visualbell t_vb=
 
 set nowrap                  " don't wrap lines
+
+set cursorline              " Highlight current line
 
 " shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -66,10 +67,8 @@ nnoremap <F11> :set list!<CR>
 colorscheme lucius
 set fillchars+=vert:\ 
 
-" :set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+:set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 :set statusline=%<%f\ %y\ %h%m%r%=%-24.(F4.NERDTree\ \ F5.Gundo\ \ F6.Recent\ \ F11.Inv\ \ F12.Mouse\ \ %4l,%-4c%)\ %P
-" :set statusline=%f\ Line:%l/%L\ [%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
-
 
 " Intellisense
 autocmd FileType python set omnifunc=pythoncomplete#Complete
