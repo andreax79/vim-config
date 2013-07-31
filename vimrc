@@ -57,7 +57,6 @@ let g:ctrlp_custom_ignore = {
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F4> :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F5> :GundoToggle<CR>
-nnoremap <F6> :MRUToggle<CR>
 nnoremap <F11> :set list!<CR>
 
 " To save, ctrl-s.
@@ -67,8 +66,7 @@ nnoremap <F11> :set list!<CR>
 colorscheme lucius
 set fillchars+=vert:\ 
 
-:set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-:set statusline=%<%f\ %y\ %h%m%r%=%-24.(F4.NERDTree\ \ F5.Gundo\ \ F6.Recent\ \ F11.Inv\ \ F12.Mouse\ \ %4l,%-4c%)\ %P
+":set statusline+=%-24.(F4.NERDTree\ \ F5.Gundo\ \ F11.Inv\ \ F12.Mouse\ \ %4l,%-4c%)\ %P
 
 " Intellisense
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -86,10 +84,8 @@ inoremap <expr> <A-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 
-let g:EasyGrepCommand=1
-let g:EasyGrepRecursive=1
-let g:EasyGrepSearchCurrentBufferDir=1
-let g:EasyGrepIgnoreCase=1
-let g:EasyGrepFilesToExclude='*.pyc,*.pyo,.svn,.git'
-
 let g:miniBufExplModSelTarget = 1
+let g:statline_show_encoding = 0
+
+let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_enable_highlighting = 0

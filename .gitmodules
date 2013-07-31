@@ -25,12 +25,12 @@
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "bundle/EasyGrep"]
-	path = bundle/EasyGrep
-	url = git://github.com/vim-scripts/EasyGrep.git
-[submodule "bundle/mru.vim"]
-	path = bundle/mru.vim
-	url = https://github.com/andreax79/mru.vim.git
 [submodule "bundle/ack-vim"]
 	path = bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-statline"]
+	path = bundle/vim-statline
+	url = git://github.com/millermedeiros/vim-statline
