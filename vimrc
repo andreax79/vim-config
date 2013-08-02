@@ -57,7 +57,8 @@ let g:ctrlp_custom_ignore = {
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F4> :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F5> :GundoToggle<CR>
-nnoremap <F11> :set list!<CR>
+" nnoremap <F11> :set list!<CR>
+nnoremap <silent> <F11> :YRShow<CR>
 
 " To save, ctrl-s.
 " nmap <c-s> :w<CR>
