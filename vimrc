@@ -4,7 +4,6 @@ filetype plugin indent on
 
 set nocompatible
 
-set background=dark         " Assume a dark background
 
 " tab
 set tabstop=4
@@ -64,7 +63,9 @@ nnoremap <silent> <F11> :YRShow<CR>
 " nmap <c-s> :w<CR>
 " imap <c-s> <Esc>:w<CR>a
 
-colorscheme lucius
+" set background=dark         " Assume a dark background
+" colorscheme lucius
+colorscheme summerfruit256
 set fillchars+=vert:\ 
 
 ":set statusline+=%-24.(F4.NERDTree\ \ F5.Gundo\ \ F11.Inv\ \ F12.Mouse\ \ %4l,%-4c%)\ %P
