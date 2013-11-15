@@ -44,7 +44,7 @@ set cursorline              " Highlight current line
 " shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸.,trail:.,nbsp:.
-set list
+" set list
 
 set undodir=~/.vim/undodir
 let g:ctrlp_custom_ignore = {
@@ -56,6 +56,7 @@ let g:ctrlp_custom_ignore = {
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F4> :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <F5> :GundoToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 " nnoremap <F11> :set list!<CR>
 nnoremap <silent> <F11> :YRShow<CR>
 

@@ -37,3 +37,9 @@
 [submodule "bundle/YankRing.vim"]
 	path = bundle/YankRing.vim
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
