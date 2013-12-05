@@ -1,9 +1,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
-[submodule "bundle/netdtree"]
-	path = bundle/netdtree
-	url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
 	url = git://github.com/fholgado/minibufexpl.vim.git
@@ -43,3 +40,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/netdtree"]
+	path = bundle/netdtree
+	url = git://github.com/scrooloose/nerdtree.git
