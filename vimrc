@@ -1,9 +1,28 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
 set nocompatible
+filetype off
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-sensible'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'nvie/vim-togglemouse'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'sjl/gundo.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'millermedeiros/vim-statline'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'tyok/nerdtree-ack'
+
+filetype plugin indent on   " required
 
 " tab
 set tabstop=4
@@ -59,6 +78,7 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 " nnoremap <F11> :set list!<CR>
 nnoremap <silent> <F11> :YRShow<CR>
+nmap <c-p> :CtrlP<CR>
 
 " To save, ctrl-s.
 " nmap <c-s> :w<CR>
@@ -87,8 +107,11 @@ inoremap <expr> <A-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+
 let g:miniBufExplModSelTarget = 1
 let g:statline_show_encoding = 0
 
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_enable_highlighting = 0
+

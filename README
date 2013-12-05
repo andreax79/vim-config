@@ -6,17 +6,8 @@ Create symlink:
 
     ln -s ~/.vim/vimrc ~/.vimrc
 
-Switch to the `~/.vim` directory, and fetch submodules:
+Install/upgrade bundles:
 
     cd ~/.vim
-    git submodule init
-    git submodule update
-
-Upgrade all bundled plugins
-    
-    git submodule foreach git pull origin master
-
-Add a new plugin
-   
-    git submodule add git://github.com/tpope/vim-sensible.git bundle/vim-sensible
+    ./upgrade
 
