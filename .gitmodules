@@ -1,9 +1,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
-[submodule "bundle/minibufexpl.vim"]
-	path = bundle/minibufexpl.vim
-	url = git://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/tcomment_vim"]
 	path = bundle/tcomment_vim
 	url = git://github.com/tomtom/tcomment_vim.git
@@ -43,3 +40,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/minibufexpl.vim"]
+	path = bundle/minibufexpl.vim
+	url = git://github.com/fholgado/minibufexpl.vim.git
