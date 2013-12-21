@@ -2,11 +2,8 @@ Installation:
 
     git clone git://github.com/andreax79/vim-config.git ~/.vim
     git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    ~/.vim/upgrade 
-
-Create symlink:
-
     ln -s ~/.vim/vimrc ~/.vimrc
+    ~/.vim/upgrade 
 
 Install/upgrade bundles:
 
