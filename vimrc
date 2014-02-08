@@ -17,10 +17,11 @@ Bundle 'millermedeiros/vim-statline'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tyok/nerdtree-ack'
+Bundle 'unite.vim'
 
 filetype plugin indent on   " required
 
@@ -78,7 +79,9 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 " nnoremap <F11> :set list!<CR>
 nnoremap <silent> <F11> :YRShow<CR>
-nmap <c-p> :CtrlP<CR>
+"nmap <c-p> :CtrlP<CR>
+nnoremap <C-P> : Unite buffer file_rec<CR>
+noremap <Leader>a :Ack<CR>
 
 " To save, ctrl-s.
 " nmap <c-s> :w<CR>
@@ -108,6 +111,11 @@ inoremap <expr> <A-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+
+let g:ctrlp_working_path_mode = 2
+
+let g:unite_enable_start_insert = 1
+let g:yankring_replace_n_pkey = ''
 
 let g:miniBufExplModSelTarget = 1
 let g:statline_show_encoding = 0
