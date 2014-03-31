@@ -19,9 +19,10 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tyok/nerdtree-ack'
 Bundle 'unite.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on   " required
 
@@ -81,6 +82,7 @@ nnoremap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F11> :YRShow<CR>
 "nmap <c-p> :CtrlP<CR>
 nnoremap <C-P> : Unite buffer file_rec<CR>
+nnoremap <C-A> : Unite buffer<CR>
 noremap <Leader>a :Ack<CR>
 
 " To save, ctrl-s.
@@ -112,14 +114,41 @@ inoremap <expr> <A-Space> pumvisible() \|\| &omnifunc == '' ?
 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
-let g:ctrlp_working_path_mode = 2
-
 let g:unite_enable_start_insert = 1
 let g:yankring_replace_n_pkey = ''
 
 let g:miniBufExplModSelTarget = 1
 let g:statline_show_encoding = 0
 
+"let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_enable_highlighting = 0
+
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-s2)
+
+" EasyMotion
+let g:EasyMotion_smartcase = 1 " Turn on case sensitive feature
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz' " Set the keys to be used for motion targets
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader><Right> <Plug>(easymotion-lineforward)
+map <Leader><Down> <Plug>(easymotion-j)
+map <Leader><Up> <Plug>(easymotion-k)
+map <Leader><Left> <Plug>(easymotion-linebackward)
+
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionTarget2First ErrorMsg
+hi link EasyMotionTarget2Second ErrorMsg
 
