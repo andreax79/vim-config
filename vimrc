@@ -23,6 +23,16 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tyok/nerdtree-ack'
 Bundle 'unite.vim'
 Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Shougo/vimproc.vim'
+" Bundle 'Shougo/vimshell.vim'
+" Bundle 'Shougo/neocomplcache.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'int3/vim-extradite'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 filetype plugin indent on   " required
 
@@ -64,6 +74,7 @@ set cursorline              " Highlight current line
 
 " shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
+nmap <leader>p :set paste!<CR>
 set listchars=tab:▸.,trail:.,nbsp:.
 " set list
 
@@ -83,6 +94,7 @@ nnoremap <silent> <F11> :YRShow<CR>
 "nmap <c-p> :CtrlP<CR>
 nnoremap <C-P> : Unite buffer file_rec<CR>
 nnoremap <C-A> : Unite buffer<CR>
+nnoremap <space>s :Unite -quick-match buffer<cr>
 noremap <Leader>a :Ack<CR>
 
 " To save, ctrl-s.
@@ -120,7 +132,7 @@ let g:yankring_replace_n_pkey = ''
 let g:miniBufExplModSelTarget = 1
 let g:statline_show_encoding = 0
 
-"let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_enable_highlighting = 0
 
@@ -151,4 +163,7 @@ map <Leader><Left> <Plug>(easymotion-linebackward)
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionTarget2First ErrorMsg
 hi link EasyMotionTarget2Second ErrorMsg
+
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 
