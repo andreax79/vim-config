@@ -3,5 +3,5 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-source bundles.vim
+source ~/.vim/bundles.vim
 call vundle#end()
