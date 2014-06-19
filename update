@@ -3,12 +3,19 @@
 cd ~/.vim
 # Pull
 git pull
-# Fetch submodules
-# git submodule init
-# git submodule update
-# Upgrade all bundled plugins
-# git submodule foreach git pull origin master
-# Install/update bundles
-vim +BundleInstall +qall
-vim +BundleUpdate +qall
-vim +BundleClean +qall
+#
+mkdir -p bundle
+if [ ! -d "bundle/Vundle.vim" ]; then
+  # Fetch Vundle
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+else
+  # Update Vundle
+  cd bundle/Vundle.vim
+  git pull
+  cd ../..
+fi
+pwd
+# Install/update/remove bundles
+vim -u install.vim +BundleInstall +qall
+vim -u install.vim +BundleUpdate +qall
+vim -u install.vim +BundleClean +qall
