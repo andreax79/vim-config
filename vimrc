@@ -37,8 +37,14 @@ set undolevels=1000
 set number
 "map Q gq
 
-set mouse=a                 " Automatically enable mouse usage"
+set mouse=a                 " Automatically enable mouse usage
+if &term =~ '^screen'
+  " tmux knows the extended mouse mode
+  set ttymouse=xterm2
+endif
+
 set noerrorbells visualbell t_vb=
+
 
 set nowrap                  " don't wrap lines
 
