@@ -32,3 +32,6 @@ Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
 Bundle "oplatek/Conque-Shell"
 
+Bundle "hrsh7th/vim-versions"
+Bundle "andreax79/very-important-buffers.vim"
+
