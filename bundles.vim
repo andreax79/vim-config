@@ -35,3 +35,5 @@ Bundle "oplatek/Conque-Shell"
 Bundle "hrsh7th/vim-versions"
 Bundle "andreax79/very-important-buffers.vim"
 
+Bundle "kergoth/vim-bitbake"
+
