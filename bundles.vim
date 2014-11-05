@@ -1,39 +1,63 @@
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+" a universal set of defaults that (hopefully) everyone can agree on
 Bundle 'tpope/vim-sensible'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'Raimondi/delimitMate'
+" Bundle 'Raimondi/delimitMate'
+
+" Toggles the mouse focus between Vim and your terminal emulator
 Bundle 'nvie/vim-togglemouse'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'sjl/gundo.vim'
+
+" Ack integration
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'millermedeiros/vim-statline'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-" Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-" Bundle 'fholgado/minibufexpl.vim'
-Bundle 'tyok/nerdtree-ack'
-Bundle 'unite.vim'
+
+" Text filtering and alignment
+Bundle 'godlygeek/tabular'
+
+" Vim motions on speed! 
 Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'Shougo/vimproc.vim'
+
+" Motion through CamelCase words with ',w', ',b' and ',e'
+Bundle 'bkad/CamelCaseMotion'
+
+" Maintains a history of previous yanks, changes and deletes
+Bundle 'vim-scripts/YankRing.vim'
+
+" Quoting/parenthesizing made simple
+Bundle 'tpope/vim-surround'
+
+" NERDTree
+Bundle 'scrooloose/nerdtree'
+Bundle 'tyok/nerdtree-ack'
+Bundle 'Xuyuanp/nerdtree-git-plugin' 
+
+" Unite
+Bundle 'unite.vim'
+Bundle 'Shougo/vimproc.vim'
+" file explorer implemented for unite
+Bundle 'Shougo/vimfiler.vim'
+" useful interface for version control for unite
+Bundle 'hrsh7th/vim-versions'
 " Bundle 'Shougo/vimshell.vim'
-" Bundle 'Shougo/neocomplcache.vim'
+
+" Git
 Bundle 'tpope/vim-fugitive'
 Bundle 'int3/vim-extradite'
 
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+" snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
-Bundle "pangloss/vim-javascript"
-Bundle "oplatek/Conque-Shell"
+" Very Important Buffers
+Bundle 'andreax79/very-important-buffers.vim'
 
-Bundle "hrsh7th/vim-versions"
-Bundle "andreax79/very-important-buffers.vim"
-
-Bundle "kergoth/vim-bitbake"
+" Languages
+Bundle 'pangloss/vim-javascript'
+Bundle 'leafgarland/typescript-vim'
 

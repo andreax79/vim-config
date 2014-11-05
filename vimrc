@@ -39,6 +39,13 @@ if &term =~ '^screen'
 endif
 colorscheme summerfruit256
 
+" Force saving files that require root permission
+cmap w!! %!sudo tee > /dev/null %
+
+" Turn on wildmenu
+set wildmenu
+
+"
 " search
 set infercase
 set ignorecase
@@ -63,18 +70,6 @@ nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
 " Shortcut to rapidly toggle `set paste` <Leader>p
 nmap <leader>p :set paste!<CR>
 
-nmap s <Plug>(easymotion-s) " `s{char}{label}` Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" nmap s <Plug>(easymotion-s2) " `s{char}{char}{label}` Need one more keystroke, but on average, it may be more comfortable.
-
-" map <Leader>l <Plug>(easymotion-lineforward)
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
-" map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader><Right> <Plug>(easymotion-lineforward)
-map <Leader><Down> <Plug>(easymotion-j)
-map <Leader><Up> <Plug>(easymotion-k)
-map <Leader><Left> <Plug>(easymotion-linebackward)
-
 let g:yankring_replace_n_pkey = ''
 
 let g:statline_show_encoding = 0
@@ -94,6 +89,17 @@ let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz' " Set the keys to be used f
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionTarget2First ErrorMsg
 hi link EasyMotionTarget2Second ErrorMsg
+nmap s <Plug>(easymotion-s) " `s{char}{label}` Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" nmap s <Plug>(easymotion-s2) " `s{char}{char}{label}` Need one more keystroke, but on average, it may be more comfortable.
+
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader><Right> <Plug>(easymotion-lineforward)
+map <Leader><Down> <Plug>(easymotion-j)
+map <Leader><Up> <Plug>(easymotion-k)
+map <Leader><Left> <Plug>(easymotion-linebackward)
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
@@ -110,5 +116,5 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-:command Shell ConqueTermSplit zsh
-
+" Very Important Buffer
+nnoremap <C-B> : VIBToggle<CR>
