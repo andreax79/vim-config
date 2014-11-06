@@ -37,7 +37,10 @@ set mouse=a                 " Automatically enable mouse usage
 if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
-colorscheme summerfruit256
+" colorscheme summerfruit256
+set background="dark"
+" colorscheme lucius
+colorscheme hybrid
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
