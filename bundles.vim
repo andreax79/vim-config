@@ -62,3 +62,6 @@ Bundle 'andreax79/very-important-buffers.vim'
 " Languages
 Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
+
+" Highlight/trim all trailing whitespace characters (spaces and tabs)
+Bundle 'ntpeters/vim-better-whitespace'
