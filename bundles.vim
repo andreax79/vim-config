@@ -14,17 +14,20 @@ Bundle 'sjl/gundo.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 
+" Airline
 Bundle 'bling/vim-airline'
-" Bundle 'millermedeiros/vim-statline'
 
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
 
-" Vim motions on speed! 
+" Vim motions on speed!
 Bundle 'Lokaltog/vim-easymotion'
 
 " Motion through CamelCase words with ',w', ',b' and ',e'
 Bundle 'bkad/CamelCaseMotion'
+
+" Text object representing lines of code at the same indent level - Vii, <count>ai
+Bundle 'michaeljsmith/vim-indent-object'
 
 " Maintains a history of previous yanks, changes and deletes
 Bundle 'vim-scripts/YankRing.vim'
@@ -35,7 +38,7 @@ Bundle 'tpope/vim-surround'
 " NERDTree
 Bundle 'scrooloose/nerdtree'
 Bundle 'tyok/nerdtree-ack'
-Bundle 'Xuyuanp/nerdtree-git-plugin' 
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Unite
 Bundle 'unite.vim'
@@ -63,5 +66,5 @@ Bundle 'andreax79/very-important-buffers.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
 
-" Highlight/trim all trailing whitespace characters (spaces and tabs)
+" Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces
 Bundle 'ntpeters/vim-better-whitespace'
