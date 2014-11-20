@@ -13,7 +13,9 @@ Bundle 'sjl/gundo.vim'
 " Ack integration
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'millermedeiros/vim-statline'
+
+Bundle 'bling/vim-airline'
+" Bundle 'millermedeiros/vim-statline'
 
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
@@ -60,4 +62,3 @@ Bundle 'andreax79/very-important-buffers.vim'
 " Languages
 Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
-

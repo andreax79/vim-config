@@ -55,10 +55,8 @@ set ignorecase
 set smartcase
 set showmatch
 
-map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-nnoremap <F4> :execute 'NERDTreeToggle ' . getcwd()<CR>
+nnoremap <F4> :execute 'NERDTreeToggle'<CR>
 nnoremap <F5> :GundoToggle<CR>
-nnoremap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F11> :YRShow<CR>
 nnoremap <C-P> : Unite -no-split buffer file_rec<CR>
 nnoremap <C-A> : Unite -no-split buffer<CR>
@@ -77,6 +75,7 @@ let g:yankring_replace_n_pkey = ''
 
 let g:statline_show_encoding = 0
 
+let g:airline_powerline_fonts = 1
 
 " Unite
 let g:unite_enable_start_insert = 1
