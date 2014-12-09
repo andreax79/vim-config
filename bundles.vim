@@ -68,3 +68,6 @@ Bundle 'leafgarland/typescript-vim'
 
 " Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces
 Bundle 'ntpeters/vim-better-whitespace'
+
+" Multiple selections
+Bundle 'terryma/vim-multiple-cursors'
