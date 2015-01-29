@@ -71,3 +71,6 @@ Bundle 'ntpeters/vim-better-whitespace'
 
 " Multiple selections
 Bundle 'terryma/vim-multiple-cursors'
+
+" Quick close another window (e.g. Qj means close lower window and go back )
+Bundle 'vim-scripts/quit-another-window'
