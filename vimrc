@@ -73,9 +73,9 @@ nmap <leader>p :set paste!<CR>
 
 let g:yankring_replace_n_pkey = ''
 
-let g:statline_show_encoding = 0
-
+" Airline
 let g:airline_powerline_fonts = 1
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
 
 " Unite
 let g:unite_enable_start_insert = 1
