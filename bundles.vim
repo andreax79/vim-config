@@ -66,7 +66,7 @@ Bundle 'andreax79/very-important-buffers.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
 
-" Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces
+" Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces, :ToggleWhiteSpaces
 Bundle 'ntpeters/vim-better-whitespace'
 
 " Multiple selections
@@ -74,3 +74,9 @@ Bundle 'terryma/vim-multiple-cursors'
 
 " Quick close another window (e.g. Qj means close lower window and go back )
 Bundle 'vim-scripts/quit-another-window'
+
+" Easy text exchange operator for Vim - cx and cxx
+Bundle 'tommcdo/vim-exchange'
+
+" Automatically set background on local sunrise/sunset time
+Bundle 'amdt/sunset'

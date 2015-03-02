@@ -37,10 +37,25 @@ set mouse=a                 " Automatically enable mouse usage
 if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
-" colorscheme summerfruit256
 set background="dark"
+
+" colorscheme summerfruit256
 " colorscheme lucius
-colorscheme hybrid
+" colorscheme hybrid
+
+" Automatically set background on local sunrise/sunset time
+let g:sunset_latitude = 45.46
+let g:sunset_longitude = 9.18
+
+" Daytime color scheme
+function! Sunset_daytime_callback()
+    colorscheme summerfruit256
+endfunction
+
+" Night color scheme
+function! Sunset_nighttime_callback()
+    colorscheme hybrid
+endfunction
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
