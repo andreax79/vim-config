@@ -66,6 +66,7 @@ Bundle 'andreax79/very-important-buffers.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'mxw/vim-jsx'
 
 " Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces, :ToggleWhiteSpaces
 Bundle 'ntpeters/vim-better-whitespace'
@@ -74,7 +75,7 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'terryma/vim-multiple-cursors'
 
 " Quick close another window (e.g. Qj means close lower window and go back )
-Bundle 'vim-scripts/quit-another-window'
+Bundle 'andreax79/quit-another-window'
 
 " Easy text exchange operator for Vim - cx and cxx
 Bundle 'tommcdo/vim-exchange'
