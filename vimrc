@@ -39,6 +39,9 @@ if &term =~ '^screen'
 endif
 set background="dark"
 
+" disable left scrollbar in MacVim
+set guioptions-=L
+
 " colorscheme summerfruit256
 " colorscheme lucius
 " colorscheme hybrid
@@ -59,6 +62,9 @@ endfunction
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
+
+" Save with W
+command! W  write
 
 " Turn on wildmenu
 set wildmenu
