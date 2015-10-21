@@ -128,6 +128,7 @@ map <Leader><Left> <Plug>(easymotion-linebackward)
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_enable_highlighting = 0
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
