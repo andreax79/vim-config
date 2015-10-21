@@ -46,6 +46,8 @@ set guioptions-=L
 " colorscheme lucius
 " colorscheme hybrid
 
+let g:solarized_termcolors=256
+
 " Automatically set background on local sunrise/sunset time
 let g:sunset_latitude = 45.46
 let g:sunset_longitude = 9.18

@@ -82,3 +82,6 @@ Bundle 'tommcdo/vim-exchange'
 
 " Automatically set background on local sunrise/sunset time
 Bundle 'amdt/sunset'
+
+" Register trigger on save
+Bundle 'andreax79/vim-on-write'
