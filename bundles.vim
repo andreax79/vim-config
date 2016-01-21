@@ -40,14 +40,17 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tyok/nerdtree-ack'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 
-" Unite
-Bundle 'unite.vim'
-Bundle 'Shougo/vimproc.vim'
-" file explorer implemented for unite
-Bundle 'Shougo/vimfiler.vim'
-" useful interface for version control for unite
-Bundle 'hrsh7th/vim-versions'
-" Bundle 'Shougo/vimshell.vim'
+" " Unite
+" Bundle 'unite.vim'
+" Bundle 'Shougo/vimproc.vim'
+" " file explorer implemented for unite
+" Bundle 'Shougo/vimfiler.vim'
+" " useful interface for version control for unite
+" Bundle 'hrsh7th/vim-versions'
+" " Bundle 'Shougo/vimshell.vim'
+
+" Ctrlp
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " Git
 Bundle 'tpope/vim-fugitive'
