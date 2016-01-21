@@ -71,7 +71,6 @@ command! W  write
 " Turn on wildmenu
 set wildmenu
 
-"
 " search
 set infercase
 set ignorecase
@@ -81,17 +80,25 @@ set showmatch
 nnoremap <F4> :execute 'NERDTreeToggle'<CR>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <silent> <F11> :YRShow<CR>
-nnoremap <C-P> : Unite -no-split buffer file_rec<CR>
-nnoremap <C-A> : Unite -no-split buffer<CR>
-nnoremap <space>s :Unite -quick-match buffer<cr>
-nnoremap <space>f :Unite -start-insert file_rec/async<cr>
 
-"unite_exit Search for recently edited files with <Leader>m
-nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-" Search for Open buffers with <Leader>b
-nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+" Unite
+" nnoremap <C-P> : Unite -no-split buffer file_rec<CR>
+" nnoremap <C-A> : Unite -no-split buffer<CR>
+" nnoremap <space>s :Unite -quick-match buffer<cr>
+" nnoremap <space>f :Unite -start-insert file_rec/async<cr>
+" "unite_exit Search for recently edited files with <Leader>m
+" nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
+" " Search for Open buffers with <Leader>b
+" nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+" let g:unite_enable_start_insert = 1
+
+" CtrlP
+let g:ctrlp_mruf_default_order = 0 " disable sorting
+let g:ctrlp_mruf_default_order = 0 " working directory
+let g:ctrlp_cmd = 'CtrlPLastMode --dir'
+
 " Shortcut to rapidly toggle `set list` <Leader>l
-" nmap <leader>l :set list!<CR>
+nmap <leader>l :set list!<CR>
 " Shortcut to rapidly toggle `set paste` <Leader>p
 nmap <leader>p :set paste!<CR>
 
@@ -100,9 +107,6 @@ let g:yankring_replace_n_pkey = ''
 " Airline
 let g:airline_powerline_fonts = 1
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
-
-" Unite
-let g:unite_enable_start_insert = 1
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
@@ -146,3 +150,4 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " Very Important Buffer
 nnoremap <C-B> : VIBToggle<CR>
 
+set shortmess+=l
