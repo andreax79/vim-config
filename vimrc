@@ -123,6 +123,7 @@ set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " EasyMotion
 let g:EasyMotion_smartcase = 1 " Turn on case sensitive feature
