@@ -88,3 +88,6 @@ Bundle 'amdt/sunset'
 
 " Register trigger on save
 Bundle 'andreax79/vim-on-write'
+
+" Open a file in a given line, e.g. vim index.html:20
+Bundle 'bogado/file-line'

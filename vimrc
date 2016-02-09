@@ -77,6 +77,10 @@ set ignorecase
 set smartcase
 set showmatch
 
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>g :GundoToggle<CR>
+nmap <leader>y :YRShow<CR>
+
 nnoremap <F4> :execute 'NERDTreeToggle'<CR>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <silent> <F11> :YRShow<CR>
@@ -95,7 +99,16 @@ nnoremap <silent> <F11> :YRShow<CR>
 " CtrlP
 let g:ctrlp_mruf_default_order = 0 " disable sorting
 let g:ctrlp_mruf_default_order = 0 " working directory
-let g:ctrlp_cmd = 'CtrlPLastMode --dir'
+let g:ctrlp_cmd = 'call CallCtrlP()'
+
+func! CallCtrlP()
+    if exists('s:called_ctrlp')
+        CtrlPLastMode --dir
+    else
+        let s:called_ctrlp = 1
+        CtrlPMRU
+    endif
+endfunc
 
 " Shortcut to rapidly toggle `set list` <Leader>l
 nmap <leader>l :set list!<CR>
