@@ -80,10 +80,28 @@ set showmatch
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>g :GundoToggle<CR>
 nmap <leader>y :YRShow<CR>
+nmap <leader>m :ToggleMouse<CR>
 
 nnoremap <F4> :execute 'NERDTreeToggle'<CR>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <silent> <F11> :YRShow<CR>
+
+" Toggle mouse
+fun! s:ToggleMouse()
+    if !exists("s:old_mouse")
+        let s:old_mouse = "a"
+    endif
+
+    if &mouse == ""
+        let &mouse = s:old_mouse
+        echo "Mouse is for Vim"
+    else
+        let s:old_mouse = &mouse
+        let &mouse=""
+        echo "Mouse is for terminal"
+    endif
+endfunction
+command! ToggleMouse call s:ToggleMouse()
 
 " Unite
 " nnoremap <C-P> : Unite -no-split buffer file_rec<CR>
@@ -163,5 +181,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 " Very Important Buffer
 nnoremap <C-B> : VIBToggle<CR>
+
+" Define the command 'ReloadVimrc'
+command! ReloadVimrc so $MYVIMRC
 
 set shortmess+=l

@@ -5,8 +5,6 @@ Bundle 'tpope/vim-sensible'
 Bundle 'tomtom/tcomment_vim'
 " Bundle 'Raimondi/delimitMate'
 
-" Toggles the mouse focus between Vim and your terminal emulator
-Bundle 'nvie/vim-togglemouse'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'sjl/gundo.vim'
 
