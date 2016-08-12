@@ -45,6 +45,7 @@ set guioptions-=L
 " colorscheme summerfruit256
 " colorscheme lucius
 " colorscheme hybrid
+colorscheme molokai " (7/2016)
 
 let g:solarized_termcolors=256
 
@@ -59,7 +60,8 @@ endfunction
 
 " Night color scheme
 function! Sunset_nighttime_callback()
-    colorscheme hybrid
+    " colorscheme hybrid
+    colorscheme molokai
 endfunction
 
 " Force saving files that require root permission
@@ -142,6 +144,7 @@ set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
+let g:NERDTreeMouseMode = 3 " Open files/folder with a single click
 
 " EasyMotion
 let g:EasyMotion_smartcase = 1 " Turn on case sensitive feature
@@ -185,4 +188,17 @@ nnoremap <C-B> : VIBToggle<CR>
 " Define the command 'ReloadVimrc'
 command! ReloadVimrc so $MYVIMRC
 
+" function! NERDTreeCustomOpen(node)
+"     call a:node.activate({'reuse': 0, 'where': 'p'})
+" endfunction
+"
+" call NERDTreeAddKeyMap({
+"             \ 'key': 'o',
+"             \ 'scope': "FileNode",
+"             \ 'callback': "NERDTreeCustomOpen",
+"             \ 'override': 1 })
+
 set shortmess+=l
+
+" hide ~ (non text)
+":hi NonText guifg=bg

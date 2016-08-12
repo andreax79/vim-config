@@ -59,6 +59,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
+Bundle 'magarcia/vim-angular2-snippets'
 
 " Very Important Buffers
 Bundle 'andreax79/very-important-buffers.vim'
@@ -68,6 +69,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'mxw/vim-jsx'
+Bundle 'othree/html5.vim'
+
+" Vim indenter for standalone and embedded JavaScript and TypeScript
+Bundle 'jason0x43/vim-js-indent'
 
 " Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces, :ToggleWhiteSpaces
 Bundle 'ntpeters/vim-better-whitespace'
@@ -89,3 +94,6 @@ Bundle 'andreax79/vim-on-write'
 
 " Open a file in a given line, e.g. vim index.html:20
 Bundle 'bogado/file-line'
+
+" Press - in any buffer to hop up to the directory listing and seek to the file you just came from
+Bundle 'tpope/vim-vinegar'
