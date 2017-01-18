@@ -49,6 +49,11 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Ctrlp
 Bundle 'ctrlpvim/ctrlp.vim'
+" cmdline/yankring/menu
+Bundle 'sgur/ctrlp-extensions.vim'
+" A simple function navigator for ctrlp.vim
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'mattn/ctrlp-register'
 
 " Git
 Bundle 'tpope/vim-fugitive'
@@ -93,7 +98,11 @@ Bundle 'amdt/sunset'
 Bundle 'andreax79/vim-on-write'
 
 " Open a file in a given line, e.g. vim index.html:20
-Bundle 'bogado/file-line'
+" Bundle 'bogado/file-line'
 
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from
 Bundle 'tpope/vim-vinegar'
+
+" Preview colours in source code while editing
+Bundle 'ap/vim-css-color'
+

@@ -84,10 +84,6 @@ nmap <leader>g :GundoToggle<CR>
 nmap <leader>y :YRShow<CR>
 nmap <leader>m :ToggleMouse<CR>
 
-nnoremap <F4> :execute 'NERDTreeToggle'<CR>
-nnoremap <F5> :GundoToggle<CR>
-nnoremap <silent> <F11> :YRShow<CR>
-
 " Toggle mouse
 fun! s:ToggleMouse()
     if !exists("s:old_mouse")
@@ -120,6 +116,7 @@ command! ToggleMouse call s:ToggleMouse()
 let g:ctrlp_mruf_default_order = 0 " disable sorting
 let g:ctrlp_mruf_default_order = 0 " working directory
 let g:ctrlp_cmd = 'call CallCtrlP()'
+let g:ctrlp_extensions = ['yankring', 'cmdline']
 
 func! CallCtrlP()
     if exists('s:called_ctrlp')
@@ -187,6 +184,20 @@ nnoremap <C-B> : VIBToggle<CR>
 
 " Define the command 'ReloadVimrc'
 command! ReloadVimrc so $MYVIMRC
+
+" Command line Emacs-style movement keys
+cnoremap <C-a>  <Home>
+cnoremap <C-b>  <Left>
+cnoremap <C-f>  <Right>
+cnoremap <C-d>  <Delete>
+cnoremap <M-b>  <S-Left>
+cnoremap <M-f>  <S-Right>
+cnoremap <M-d>  <S-right><Delete>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+cnoremap <Esc>d <S-right><Delete>
+cnoremap <C-g>  <C-c>
+
 
 " function! NERDTreeCustomOpen(node)
 "     call a:node.activate({'reuse': 0, 'where': 'p'})
