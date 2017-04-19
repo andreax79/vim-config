@@ -1,5 +1,6 @@
 .netrwhist
 undodir
 bundle
+/bundle/*
 *.swp
 *.un~

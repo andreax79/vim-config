@@ -37,7 +37,7 @@ set mouse=a                 " Automatically enable mouse usage
 if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
-set background="dark"
+" set background="dark"
 
 " disable left scrollbar in MacVim
 set guioptions-=L
@@ -45,9 +45,11 @@ set guioptions-=L
 " colorscheme summerfruit256
 " colorscheme lucius
 " colorscheme hybrid
-colorscheme molokai " (7/2016)
+" colorscheme molokai " (7/2016)
 
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16 " f you've loaded the solarized color palette
+set background="dark"
+colorscheme solarized " (4/2017)
 
 " Automatically set background on local sunrise/sunset time
 let g:sunset_latitude = 45.46
@@ -55,13 +57,15 @@ let g:sunset_longitude = 9.18
 
 " Daytime color scheme
 function! Sunset_daytime_callback()
-    colorscheme summerfruit256
+    " colorscheme summerfruit256
+    set background="light"
 endfunction
 
 " Night color scheme
 function! Sunset_nighttime_callback()
     " colorscheme hybrid
-    colorscheme molokai
+    " colorscheme molokai
+    set background="dark"
 endfunction
 
 " Force saving files that require root permission
@@ -198,6 +202,10 @@ cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g>  <C-c>
 
+" Use The Silver Searcher with Ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " function! NERDTreeCustomOpen(node)
 "     call a:node.activate({'reuse': 0, 'where': 'p'})

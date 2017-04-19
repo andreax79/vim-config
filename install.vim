@@ -8,3 +8,4 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 source ~/.vim/bundles.vim
 call vundle#end()
+filetype plugin indent on
