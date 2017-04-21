@@ -37,7 +37,6 @@ set mouse=a                 " Automatically enable mouse usage
 if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
-" set background="dark"
 
 " disable left scrollbar in MacVim
 set guioptions-=L
@@ -46,26 +45,35 @@ set guioptions-=L
 " colorscheme lucius
 " colorscheme hybrid
 " colorscheme molokai " (7/2016)
+" colorscheme solarized " (4/2017)
 
 let g:solarized_termcolors=16 " f you've loaded the solarized color palette
-set background="dark"
-colorscheme solarized " (4/2017)
 
 " Automatically set background on local sunrise/sunset time
 let g:sunset_latitude = 45.46
 let g:sunset_longitude = 9.18
 
+function! s:Day()
+    set background=light
+    colorscheme solarized
+endfunction
+
+fun! s:Night()
+    set background=dark
+    colorscheme solarized
+endfunction
+
+command! Day call s:Day()
+command! Night call s:Night()
+
 " Daytime color scheme
 function! Sunset_daytime_callback()
-    " colorscheme summerfruit256
-    set background="light"
+    call s:Day()
 endfunction
 
 " Night color scheme
 function! Sunset_nighttime_callback()
-    " colorscheme hybrid
-    " colorscheme molokai
-    set background="dark"
+    call s:Night()
 endfunction
 
 " Force saving files that require root permission
