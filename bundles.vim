@@ -121,3 +121,6 @@ Plugin 'tpope/vim-vinegar'
 " Preview colours in source code while editing
 Plugin 'ap/vim-css-color'
 
+" This plugin provides the following mappings which allow you to move between
+" Vim panes and tmux splits seamlessly.
+Plugin 'christoomey/vim-tmux-navigator'
