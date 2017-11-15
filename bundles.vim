@@ -16,7 +16,7 @@ Plugin 'tomtom/tcomment_vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-airline/vim-airline-themes'
-" Bundle 'chriskempson/base16-vim'
+Bundle 'chriskempson/base16-vim'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 Plugin 'sjl/gundo.vim'

@@ -47,20 +47,23 @@ set guioptions-=L
 " colorscheme molokai " (7/2016)
 " colorscheme solarized " (4/2017)
 
-let g:solarized_termcolors=16 " f you've loaded the solarized color palette
+" let g:solarized_termcolors=16 " f you've loaded the solarized color palette
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-one-light
 
 " Automatically set background on local sunrise/sunset time
 let g:sunset_latitude = 45.46
 let g:sunset_longitude = 9.18
 
 function! s:Day()
-    set background=light
-    colorscheme solarized
+"    set background=light
+"    colorscheme solarized
+"    colorscheme base16-default-dark
 endfunction
 
 fun! s:Night()
-    set background=dark
-    colorscheme solarized
+    " set background=dark
+    " colorscheme solarized
 endfunction
 
 command! Day call s:Day()
