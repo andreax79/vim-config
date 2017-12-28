@@ -1,126 +1,126 @@
-" Vundle Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Vim-Plug Brief help
+" :PlugInstall [name ...] - Install plugins
+" :PlugUpdate [name ...]  - Install or update plugins
+" :PlugClean[!]           - Remove unused directories (bang version will clean without prompt)
+" :PlugUpgrade            - Upgrade vim-plug itself
 
 " a universal set of defaults that (hopefully) everyone can agree on
-Plugin 'tpope/vim-sensible'
-Plugin 'tomtom/tcomment_vim'
-" Plugin 'Raimondi/delimitMate'
+Plug 'tpope/vim-sensible'
+Plug 'tomtom/tcomment_vim'
+" Plug 'Raimondi/delimitMate'
 
 " Colorschemes
-Bundle 'flazz/vim-colorschemes'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'chriskempson/base16-vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/base16-vim'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " Ack integration
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " Syntax checking
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Airline
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " Text filtering and alignment
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " Vim motions on speed!
-Plugin 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 
 " Motion through CamelCase words with ',w', ',b' and ',e'
-Plugin 'bkad/CamelCaseMotion'
+Plug 'bkad/CamelCaseMotion'
 
 " Text object representing lines of code at the same indent level - Vii, <count>ai
-Plugin 'michaeljsmith/vim-indent-object'
+Plug 'michaeljsmith/vim-indent-object'
 
 " Maintains a history of previous yanks, changes and deletes
-Plugin 'vim-scripts/YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 
 " Quoting/parenthesizing made simple
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " NERDTree
-Plugin 'scrooloose/nerdtree'
-Plugin 'tyok/nerdtree-ack'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'tyok/nerdtree-ack'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " " Unite
-" Plugin 'unite.vim'
-" Plugin 'Shougo/vimproc.vim'
+" Plug 'unite.vim'
+" Plug 'Shougo/vimproc.vim'
 " " file explorer implemented for unite
-" Plugin 'Shougo/vimfiler.vim'
+" Plug 'Shougo/vimfiler.vim'
 " " useful interface for version control for unite
-" Plugin 'hrsh7th/vim-versions'
-" " Plugin 'Shougo/vimshell.vim'
+" Plug 'hrsh7th/vim-versions'
+" " Plug 'Shougo/vimshell.vim'
 
 " Ctrlp
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " cmdline/yankring/menu
-Plugin 'sgur/ctrlp-extensions.vim'
+Plug 'sgur/ctrlp-extensions.vim'
 " A simple function navigator for ctrlp.vim
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'mattn/ctrlp-register'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'mattn/ctrlp-register'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'int3/vim-extradite'
+Plug 'tpope/vim-fugitive'
+Plug 'int3/vim-extradite'
 
 " snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'magarcia/vim-angular2-snippets'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'magarcia/vim-angular2-snippets'
 
 " Very Important Buffers
-Plugin 'andreax79/very-important-buffers.vim'
+Plug 'andreax79/very-important-buffers.vim'
 
 " Languages
-Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
 
 " Vim indenter for standalone and embedded JavaScript and TypeScript
-Plugin 'jason0x43/vim-js-indent'
+Plug 'jason0x43/vim-js-indent'
 
 " Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces, :ToggleWhiteSpaces
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Multiple selections
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " Quick close another window (e.g. Qj means close lower window and go back )
-Plugin 'andreax79/quit-another-window'
+Plug 'andreax79/quit-another-window'
 
 " Easy text exchange operator for Vim - cx and cxx
-Plugin 'tommcdo/vim-exchange'
+Plug 'tommcdo/vim-exchange'
 
 " Automatically set background on local sunrise/sunset time
-Plugin 'andreax79/sunset'
+" Plug 'andreax79/sunset'
 
 " Register trigger on save
-Plugin 'andreax79/vim-on-write'
+Plug 'andreax79/vim-on-write'
 
 " Open a file in a given line, e.g. vim index.html:20
-" Plugin 'bogado/file-line'
+" Plug 'bogado/file-line'
 
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from
-Plugin 'tpope/vim-vinegar'
+Plug 'tpope/vim-vinegar'
 
 " Preview colours in source code while editing
-Plugin 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 
 " This plugin provides the following mappings which allow you to move between
 " Vim panes and tmux splits seamlessly.
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
+
+" ZFZ Integration
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

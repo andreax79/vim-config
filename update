@@ -3,19 +3,6 @@
 cd ~/.vim
 # Pull
 git pull
-#
-mkdir -p bundle
-if [ ! -d "bundle/Vundle.vim" ]; then
-  # Fetch Vundle
-  git clone git://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-else
-  # Update Vundle
-  cd bundle/Vundle.vim
-  git pull
-  cd ../..
-fi
 pwd
 # Install/update/remove bundles
-vim -u install.vim +PluginInstall +qall
-vim -u install.vim +PluginUpdate +qall
-vim -u install.vim +PluginClean +qall
+vim -u install.vim '+PlugUpgrade' '+PlugInstall!' '+PlugUpdate' '+qa!'

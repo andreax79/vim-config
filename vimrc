@@ -1,12 +1,14 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
 source ~/.vim/bundles.vim
-call vundle#end()
-
-filetype plugin indent on   " required
+call plug#end()
 
 " tab
 set tabstop=4
@@ -52,32 +54,32 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-one-light
 
 " Automatically set background on local sunrise/sunset time
-let g:sunset_latitude = 45.46
-let g:sunset_longitude = 9.18
-
-function! s:Day()
-"    set background=light
-"    colorscheme solarized
-"    colorscheme base16-default-dark
-endfunction
-
-fun! s:Night()
-    " set background=dark
-    " colorscheme solarized
-endfunction
-
-command! Day call s:Day()
-command! Night call s:Night()
-
-" Daytime color scheme
-function! Sunset_daytime_callback()
-    call s:Day()
-endfunction
-
-" Night color scheme
-function! Sunset_nighttime_callback()
-    call s:Night()
-endfunction
+" let g:sunset_latitude = 45.46
+" let g:sunset_longitude = 9.18
+"
+" function! s:Day()
+" "    set background=light
+" "    colorscheme solarized
+" "    colorscheme base16-default-dark
+" endfunction
+"
+" fun! s:Night()
+"     " set background=dark
+"     " colorscheme solarized
+" endfunction
+"
+" command! Day call s:Day()
+" command! Night call s:Night()
+"
+" " Daytime color scheme
+" function! Sunset_daytime_callback()
+"     call s:Day()
+" endfunction
+"
+" " Night color scheme
+" function! Sunset_nighttime_callback()
+"     call s:Night()
+" endfunction
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %

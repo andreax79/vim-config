@@ -2,5 +2,9 @@
 undodir
 bundle
 /bundle/*
+plugged
+/plugged/*
+autoload
+/autoload/*
 *.swp
 *.un~

@@ -1,11 +1,11 @@
 set nocompatible
-filetype off
 
-let g:sunset_latitude = 45.46
-let g:sunset_longitude = 9.18
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
 source ~/.vim/bundles.vim
-call vundle#end()
-filetype plugin indent on
+call plug#end()
