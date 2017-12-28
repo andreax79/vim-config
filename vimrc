@@ -160,6 +160,9 @@ set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode = 3 " Open files/folder with a single click
+" open NerdTree when you're starting vim with no command line arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " EasyMotion
 let g:EasyMotion_smartcase = 1 " Turn on case sensitive feature
