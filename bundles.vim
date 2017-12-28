@@ -70,6 +70,7 @@ Plug 'mattn/ctrlp-register'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'int3/vim-extradite'
+Plug 'airblade/vim-gitgutter'
 
 " snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
 Plug 'tomtom/tlib_vim'
@@ -121,6 +122,9 @@ Plug 'ap/vim-css-color'
 " This plugin provides the following mappings which allow you to move between
 " Vim panes and tmux splits seamlessly.
 Plug 'christoomey/vim-tmux-navigator'
+
+" repeat.vim: enable repeating supported plugin maps with "."
+Plug 'tpope/vim-repeat'
 
 " ZFZ Integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
