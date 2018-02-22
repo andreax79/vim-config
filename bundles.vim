@@ -128,3 +128,5 @@ Plug 'tpope/vim-repeat'
 
 " ZFZ Integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
