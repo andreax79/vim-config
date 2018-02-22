@@ -72,12 +72,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'int3/vim-extradite'
 Plug 'airblade/vim-gitgutter'
 
-" snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+" Snippets
 Plug 'honza/vim-snippets'
-Plug 'magarcia/vim-angular2-snippets'
 
 " Very Important Buffers
 Plug 'andreax79/very-important-buffers.vim'

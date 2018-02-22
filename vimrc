@@ -239,10 +239,11 @@ set shortmess+=l
 " hide ~ (non text)
 ":hi NonText guifg=bg
 
-" 
+"
 " FZF
 noremap <c-t> <Esc>:Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>t :Files<CR>
 nmap <leader>c :BCommits<CR> " Git commits for the current buffer
+nmap <leader>s :Snippets<CR>
 
