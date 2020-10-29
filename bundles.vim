@@ -14,6 +14,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 Plug 'sjl/gundo.vim'
@@ -73,9 +74,9 @@ Plug 'int3/vim-extradite'
 Plug 'airblade/vim-gitgutter'
 
 " UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " Snippets
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Very Important Buffers
 Plug 'andreax79/very-important-buffers.vim'
@@ -86,9 +87,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
-
 " Vim indenter for standalone and embedded JavaScript and TypeScript
 Plug 'jason0x43/vim-js-indent'
+"  Generate Python docstring to your Python script file
+Plug 'heavenshell/vim-pydocstring'
 
 " Highlight/trim all trailing whitespace characters (spaces and tabs) - :StripWhiteSpaces, :ToggleWhiteSpaces
 Plug 'ntpeters/vim-better-whitespace'

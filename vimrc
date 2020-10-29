@@ -40,18 +40,21 @@ if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
 
-" disable left scrollbar in MacVim
+" hide left scrollbar, menu, and toolbar in gui
+set guioptions-=m
 set guioptions-=L
+set guioptions-=T
+" default: set guioptions=aegimrtT
 
 " colorscheme summerfruit256
 " colorscheme lucius
 " colorscheme hybrid
 " colorscheme molokai " (7/2016)
 " colorscheme solarized " (4/2017)
-
 " let g:solarized_termcolors=16 " f you've loaded the solarized color palette
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-one-light
+" let base16colorspace=256  " Access colors present in 256 colorspace
+" colorscheme base16-one-light
+colorscheme dracula_bold
 
 " Automatically set background on local sunrise/sunset time
 " let g:sunset_latitude = 45.46
@@ -153,8 +156,7 @@ nmap <leader>p :set paste!<CR>
 let g:yankring_replace_n_pkey = ''
 
 " Airline
-let g:airline_powerline_fonts = 1
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
+let g:airline_powerline_fonts = 0
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
@@ -239,11 +241,21 @@ set shortmess+=l
 " hide ~ (non text)
 ":hi NonText guifg=bg
 
-"
 " FZF
 noremap <c-t> <Esc>:Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>t :Files<CR>
 nmap <leader>c :BCommits<CR> " Git commits for the current buffer
-nmap <leader>s :Snippets<CR>
+
+let g:NERDTreeDirArrowExpandable='|'
+let g:NERDTreeDirArrowCollapsible='+'
+
+if has("gui_running")
+    set guifont=Andale\ Mono
+    set background=dark
+    colorscheme dracula_bold
+    inoremap <C-v> <ESC>"+pa
+    vnoremap <C-c> "+y
+    vnoremap <C-d> "+d
+endif
 
