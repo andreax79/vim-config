@@ -74,9 +74,9 @@ Plug 'int3/vim-extradite'
 Plug 'airblade/vim-gitgutter'
 
 " UltiSnips - The ultimate snippet solution for Vim
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Snippets
-" Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Very Important Buffers
 Plug 'andreax79/very-important-buffers.vim'
