@@ -54,6 +54,8 @@ set guioptions-=T
 " let g:solarized_termcolors=16 " f you've loaded the solarized color palette
 " let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme base16-one-light
+" let g:dracula_colorterm = 0
+set termguicolors
 colorscheme dracula_bold
 
 " Automatically set background on local sunrise/sunset time
@@ -159,7 +161,7 @@ let g:yankring_replace_n_pkey = ''
 let g:airline_powerline_fonts = 0
 
 " NERDTree
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '^__pycache__$']
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode = 3 " Open files/folder with a single click
 " open NerdTree when you're starting vim with no command line arguments
