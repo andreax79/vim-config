@@ -9,24 +9,25 @@ Plug 'tpope/vim-sensible'
 Plug 'tomtom/tcomment_vim'
 " Plug 'Raimondi/delimitMate'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+
 " Colorschemes
-Plug 'flazz/vim-colorschemes'
-Plug 'altercation/vim-colors-solarized'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'chriskempson/base16-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'flazz/vim-colorschemes'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'chriskempson/base16-vim'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
-Plug 'sjl/gundo.vim'
+" Plug 'sjl/gundo.vim'
 
 " Ack integration
 Plug 'mileszs/ack.vim'
 
 " Syntax checking
 Plug 'scrooloose/syntastic'
-
-" Airline
-Plug 'bling/vim-airline'
 
 " Text filtering and alignment
 Plug 'godlygeek/tabular'
@@ -35,7 +36,7 @@ Plug 'godlygeek/tabular'
 Plug 'Lokaltog/vim-easymotion'
 
 " Motion through CamelCase words with ',w', ',b' and ',e'
-Plug 'bkad/CamelCaseMotion'
+" Plug 'bkad/CamelCaseMotion'
 
 " Text object representing lines of code at the same indent level - Vii, <count>ai
 Plug 'michaeljsmith/vim-indent-object'
@@ -50,6 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
 " " Unite
 " Plug 'unite.vim'

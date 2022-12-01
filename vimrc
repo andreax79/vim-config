@@ -40,6 +40,13 @@ if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
 
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:nord_uniform_status_lines = 0
+
 " hide left scrollbar, menu, and toolbar in gui
 set guioptions-=m
 set guioptions-=L
@@ -56,7 +63,8 @@ set guioptions-=T
 " colorscheme base16-one-light
 " let g:dracula_colorterm = 0
 set termguicolors
-colorscheme dracula_bold
+" colorscheme dracula_bold
+colorscheme nord " (7/2022)
 
 " Automatically set background on local sunrise/sunset time
 " let g:sunset_latitude = 45.46
@@ -102,7 +110,7 @@ set smartcase
 set showmatch
 
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>g :GundoToggle<CR>
+" nmap <leader>g :GundoToggle<CR>
 nmap <leader>y :YRShow<CR>
 nmap <leader>m :ToggleMouse<CR>
 
@@ -204,6 +212,10 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
+" Enable automatic running of :RustFmt when you save a buffer
+" The :RustFmt command will format your code with rustfmt if installe)
+let g:rustfmt_autosave = 1
+
 " Very Important Buffer
 nnoremap <C-B> : VIBToggle<CR>
 
@@ -249,8 +261,8 @@ nmap <leader>b :Buffers<CR>
 nmap <leader>t :Files<CR>
 nmap <leader>c :BCommits<CR> " Git commits for the current buffer
 
-let g:NERDTreeDirArrowExpandable='|'
-let g:NERDTreeDirArrowCollapsible='+'
+" let g:NERDTreeDirArrowExpandable='|'
+" let g:NERDTreeDirArrowCollapsible='+'
 
 if has("gui_running")
     set guifont=Andale\ Mono
@@ -260,4 +272,3 @@ if has("gui_running")
     vnoremap <C-c> "+y
     vnoremap <C-d> "+d
 endif
-
