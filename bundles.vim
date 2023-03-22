@@ -33,7 +33,7 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 
 " Vim motions on speed!
-Plug 'Lokaltog/vim-easymotion'
+" Plug 'Lokaltog/vim-easymotion'
 
 " Motion through CamelCase words with ',w', ',b' and ',e'
 " Plug 'bkad/CamelCaseMotion'
@@ -135,4 +135,8 @@ Plug 'tpope/vim-repeat'
 " ZFZ Integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Leap is general-purpose motion plugin
+" Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
+Plug 'ggandor/leap.nvim'
 
