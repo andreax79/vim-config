@@ -47,11 +47,15 @@ Plug 'vim-scripts/YankRing.vim'
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
+" NvimTree
+Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-web-devicons'
+
 " NERDTree
-Plug 'scrooloose/nerdtree'
-Plug 'tyok/nerdtree-ack'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'scrooloose/nerdtree'
+" Plug 'tyok/nerdtree-ack'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'ryanoasis/vim-devicons'
 
 " " Unite
 " Plug 'unite.vim'

@@ -109,7 +109,7 @@ set ignorecase
 set smartcase
 set showmatch
 
-nmap <leader>n :NERDTreeToggle<CR>
+" nmap <leader>n :NERDTreeToggle<CR>
 " nmap <leader>g :GundoToggle<CR>
 nmap <leader>y :YRShow<CR>
 nmap <leader>m :ToggleMouse<CR>
@@ -168,13 +168,27 @@ let g:yankring_replace_n_pkey = ''
 " Airline
 let g:airline_powerline_fonts = 0
 
+" NvimTree
+" a - add file/dir
+" d - delete
+" r - rename
+" c - copy
+" p - paste
+" tab - preview
+" g? - help
+:lua vim.g.loaded_netrw = 1
+:lua vim.g.loaded_netrwPlugin = 1
+:lua vim.opt.termguicolors = true
+:lua require("nvim-tree").setup({ filters = { dotfiles = true }, git = { ignore = false }})
+nmap <silent> <Leader>n :NvimTreeToggle<CR>
+
 " NERDTree
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '^__pycache__$']
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-let g:NERDTreeMouseMode = 3 " Open files/folder with a single click
+" let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '^__pycache__$']
+" nmap <silent> <Leader>n :NERDTreeToggle<CR>
+" let g:NERDTreeMouseMode = 3 " Open files/folder with a single click
 " open NerdTree when you're starting vim with no command line arguments
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTreeFocus | endif
 
 " EasyMotion
 let g:EasyMotion_smartcase = 1 " Turn on case sensitive feature
