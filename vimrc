@@ -215,9 +215,9 @@ else
     " Vim only ---------------------------------------------------------------
 
     " NERDTree
-    source nerdtree.vim
+    source ~/.vim/nerdtree.vim
 
     " EasyMotion
-    source easymotion.vim
+    source ~/.vim/easymotion.vim
 
 endif
