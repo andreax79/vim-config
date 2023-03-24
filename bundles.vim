@@ -24,16 +24,13 @@ Plug 'arcticicestudio/nord-vim'
 " Plug 'sjl/gundo.vim'
 
 " Ack integration
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 
 " Syntax checking
 Plug 'scrooloose/syntastic'
 
 " Text filtering and alignment
 Plug 'godlygeek/tabular'
-
-" Vim motions on speed!
-" Plug 'Lokaltog/vim-easymotion'
 
 " Motion through CamelCase words with ',w', ',b' and ',e'
 " Plug 'bkad/CamelCaseMotion'
@@ -47,16 +44,6 @@ Plug 'vim-scripts/YankRing.vim'
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
-" NvimTree
-Plug 'nvim-tree/nvim-tree.lua'
-" Plug 'nvim-tree/nvim-web-devicons'
-
-" NERDTree
-" Plug 'scrooloose/nerdtree'
-" Plug 'tyok/nerdtree-ack'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'ryanoasis/vim-devicons'
-
 " " Unite
 " Plug 'unite.vim'
 " Plug 'Shougo/vimproc.vim'
@@ -67,12 +54,12 @@ Plug 'nvim-tree/nvim-tree.lua'
 " " Plug 'Shougo/vimshell.vim'
 
 " Ctrlp
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 " cmdline/yankring/menu
-Plug 'sgur/ctrlp-extensions.vim'
+" Plug 'sgur/ctrlp-extensions.vim'
 " A simple function navigator for ctrlp.vim
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'mattn/ctrlp-register'
+" Plug 'tacahiroy/ctrlp-funky'
+" Plug 'mattn/ctrlp-register'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -120,7 +107,7 @@ Plug 'andreax79/vim-on-write'
 " Plug 'bogado/file-line'
 
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from
-Plug 'tpope/vim-vinegar'
+" Plug 'tpope/vim-vinegar'
 
 " Preview colours in source code while editing
 Plug 'ap/vim-css-color'
@@ -136,7 +123,26 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Leap is general-purpose motion plugin
-" Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
-Plug 'ggandor/leap.nvim'
+if has('nvim')
+    " Neovim only ------------------------------------------------------------
 
+    " NvimTree
+    Plug 'nvim-tree/nvim-tree.lua'
+    " Plug 'nvim-tree/nvim-web-devicons'
+
+    " Leap is general-purpose motion plugin
+    " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
+    Plug 'ggandor/leap.nvim'
+
+else
+    " Vim only ---------------------------------------------------------------
+
+    " NERDTree
+    Plug 'scrooloose/nerdtree'
+    " Plug 'tyok/nerdtree-ack'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
+
+    " Vim motions on speed!
+    Plug 'Lokaltog/vim-easymotion'
+endif

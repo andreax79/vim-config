@@ -1,11 +1,14 @@
 Installation:
 
+```bash
     git clone git://github.com/andreax79/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
-    ~/.vim/update 
+    ~/.vim/update
+```
 
 Install/upgrade bundles:
 
+```bash
     cd ~/.vim
     ./update
-
+```
