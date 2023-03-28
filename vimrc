@@ -211,6 +211,11 @@ if has('nvim')
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
     :lua require('leap').add_default_mappings()
 
+    command! -bang -nargs=* Ag
+      \ call fzf#vim#grep(
+      \   'ag --nogroup --column --color '.<q-args>, 0,
+      \   fzf#vim#with_preview(), <bang>0)
+
 else
     " Vim only ---------------------------------------------------------------
 
