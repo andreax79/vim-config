@@ -4,5 +4,15 @@ cd ~/.vim
 # Pull
 git pull
 pwd
+# Vim/Neovim
+if command -v nvim &> /dev/null; then
+  VI='nvim'
+  NVIM_HOME=${XDG_CONFIG_HOME:=~/.config}/nvim
+  mkdir -p ${NVIM_HOME}
+  cp -a init.vim ${NVIM_HOME}
+else
+  VI='vim'
+fi
+exit
 # Install/update/remove bundles
-vim -u install.vim '+PlugUpgrade' '+PlugInstall!' '+PlugUpdate' '+qa!'
+$VI -u install.vim '+PlugUpgrade' '+PlugInstall!' '+PlugUpdate' '+qa!'
