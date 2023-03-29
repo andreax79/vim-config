@@ -107,7 +107,7 @@ Plug 'andreax79/vim-on-write'
 " Plug 'bogado/file-line'
 
 " Press - in any buffer to hop up to the directory listing and seek to the file you just came from
-" Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-vinegar'
 
 " Preview colours in source code while editing
 Plug 'ap/vim-css-color'
@@ -126,9 +126,13 @@ Plug 'junegunn/fzf.vim'
 if has('nvim')
     " Neovim only ------------------------------------------------------------
 
+    " Neo-Tree
+    Plug 'MunifTanjim/nui.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-neo-tree/neo-tree.nvim'
     " NvimTree
-    Plug 'nvim-tree/nvim-tree.lua'
-    " Plug 'nvim-tree/nvim-web-devicons'
+    " Plug 'nvim-tree/nvim-tree.lua'
+    " Plug 'nvim-tree/nvim-web-devicons
 
     " Leap is general-purpose motion plugin
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)

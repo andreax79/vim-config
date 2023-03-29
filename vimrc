@@ -171,11 +171,9 @@ nmap <leader>p :set paste!<CR>
 nmap <leader>y :YRShow<CR>
 " Toggle mouse
 nmap <leader>m :ToggleMouse<CR>
-" Toggle nvim-tree
-nmap <silent> <Leader>n :NvimTreeToggle<CR>
 
+nnoremap <C-B> : Buffers<CR>
 nnoremap <C-P> : History<CR>
-
 
 if has("gui_running")
     set guifont=Andale\ Mono
@@ -190,22 +188,8 @@ endif
 if has('nvim')
     " Neovim only ------------------------------------------------------------
 
-    " NvimTree
-    " a - add file/dir
-    " d - delete
-    " r - rename
-    " c - copy
-    " p - paste
-    " tab - preview
-    " g? - help
-    " :lua vim.g.loaded_netrw = 1
-    " :lua vim.g.loaded_netrwPlugin = 1
-    " :lua vim.opt.termguicolors = true
-    " :lua require("nvim-tree").setup({ filters = { dotfiles = true }, git = { ignore = false }, view = { float = { enable = false}}})
-    lua require('nvim_tree')
-    " open NvimTree when you're starting vim with no command line arguments
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTreeOpen | endif
+    " Neo Tree
+    :lua require('neo_tree')
 
     " Leap is general-purpose motion plugin
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
