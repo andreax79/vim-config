@@ -12,13 +12,45 @@ neo_tree.setup({
             mappings = {
                 ["-"] = "navigate_up",
                 ["/"] = "noop", -- disable fuzzy finder
+                ["D"] = "noop", -- disable fuzzy finder directory
+                ["l"] = "noop", -- disable open split
+                ["S"] = "noop", -- disable open split
+                ["w"] = "noop", -- disable open with window picker
+                ["!"] = "run_command", -- run commnad
+                ["s"] = "search_ag",   -- search with ag
+                ["p"] = "preview",
+                ["P"] = "preview",
+                ["\\"] = "preview",
             },
+        },
+        commands = {
+            run_command = function(state)
+                local node = state.tree:get_node()
+                local path = node:get_id()
+                vim.api.nvim_input(":! " .. path .. "<Home><Right>")
+            end,
+            search_ag = function(state)
+                local node = state.tree:get_node()
+                local path = node:get_id()
+                vim.api.nvim_input(":Ag  " .. path .. "<Home><Right><Right><Right>")
+            end,
+            preview = function(state)
+                local node = state.tree:get_node()
+                local path = node.path
+                vim.cmd("Preview " .. path)
+            end
         },
     },
     buffers = {
         follow_current_file = false,
     },
     default_component_configs = {
+        indent = {
+            with_expanders = true,
+            expander_collapsed = "",
+            expander_expanded = "",
+            expander_highlight = "NeoTreeExpander",
+        },
         icon = {
             default = "",
         },
@@ -32,7 +64,7 @@ neo_tree.setup({
                 -- Status type
                 untracked = "+",
                 ignored   = "",
-                unstaged  = "",
+                unstaged  = "*",
                 staged    = "",
                 conflict  = "",
             }
