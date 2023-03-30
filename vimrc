@@ -184,6 +184,21 @@ if has("gui_running")
     vnoremap <C-d> "+d
 endif
 
+function! Preview(args, ...)
+  if filereadable(a:args)
+    let l:source = 'bat --plain --color=always '.a:args
+  else
+    let l:source = 'ls -lah --color=always '.a:args
+  endif
+  call fzf#run({
+  \ 'source': l:source,
+  \ 'sink': 'edit '.a:args.'"',
+  \ 'options': '--ansi --layout=reverse-list --prompt "['.a:args.']> "',
+  \ 'window': {'width': 0.9, 'height': 0.9, 'border': 'rounded'}
+  \})
+endfunction
+
+command! -bang -nargs=1 Preview call Preview(<q-args>, <bang>0)
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
