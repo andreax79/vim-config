@@ -43,12 +43,10 @@ if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
 
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+" Airline
+source ~/.vim/airline.vim
 
-let g:nord_uniform_status_lines = 0
+" let g:nord_uniform_status_lines = 0
 
 " hide left scrollbar, menu, and toolbar in gui
 set guioptions-=m
@@ -102,9 +100,6 @@ endfunction
 command! ToggleMouse call s:ToggleMouse()
 
 let g:yankring_replace_n_pkey = ''
-
-" Airline
-let g:airline_powerline_fonts = 0
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
