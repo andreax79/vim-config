@@ -67,7 +67,11 @@ Plug 'int3/vim-extradite'
 Plug 'airblade/vim-gitgutter'
 
 " UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
+" SnipMate
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 " Snippets
 Plug 'honza/vim-snippets'
 
