@@ -1,0 +1,7 @@
+#!/bin/bash -
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+if [ -f ~/.local/bin/nvim.appimage ]; then
+  cp  ~/.local/bin/nvim.appimage  ~/.local/bin/nvim.appimage.old
+fi
+mv nvim.appimage ~/.local/bin/
+chmod +x ~/.local/bin/nvim.appimage
