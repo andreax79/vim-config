@@ -101,6 +101,9 @@ command! ToggleMouse call s:ToggleMouse()
 
 let g:yankring_replace_n_pkey = ''
 
+" Fix SnipMate version 0 deprecation "The legacy SnipMate parser is deprecated."
+let g:snipMate = { 'snippet_version' : 1 }
+
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
