@@ -125,7 +125,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 let g:rustfmt_autosave = 1
 
 " Very Important Buffer
-nnoremap <C-B> : VIBToggle<CR>
+" nnoremap <C-B> : VIBToggle<CR>
 
 " Define the command 'ReloadVimrc'
 command! ReloadVimrc so $MYVIMRC

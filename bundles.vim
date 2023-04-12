@@ -76,7 +76,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Very Important Buffers
-Plug 'andreax79/very-important-buffers.vim'
+" Plug 'andreax79/very-important-buffers.vim'
 
 " Languages
 Plug 'pangloss/vim-javascript'
