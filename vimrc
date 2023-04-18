@@ -213,6 +213,9 @@ if has('nvim')
       \   'ag --nogroup --column --color '.<q-args>, 0,
       \   fzf#vim#with_preview(), <bang>0)
 
+    " autocmd StdinReadPre * let s:std_in=1
+    " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
+
 else
     " Vim only ---------------------------------------------------------------
 
