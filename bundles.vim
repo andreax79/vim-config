@@ -6,7 +6,6 @@
 
 " a universal set of defaults that (hopefully) everyone can agree on
 Plug 'tpope/vim-sensible'
-Plug 'tomtom/tcomment_vim'
 " Plug 'Raimondi/delimitMate'
 
 " Airline
@@ -69,12 +68,12 @@ Plug 'airblade/vim-gitgutter'
 " UltiSnips - The ultimate snippet solution for Vim
 " Plug 'SirVer/ultisnips'
 " SnipMate
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
+" Plug 'garbas/vim-snipmate'
 " Snippets
-Plug 'honza/vim-snippets'
-
+" Plug 'honza/vim-snippets'
+"
 " Very Important Buffers
 " Plug 'andreax79/very-important-buffers.vim'
 
@@ -142,8 +141,12 @@ if has('nvim')
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
     Plug 'ggandor/leap.nvim'
 
+    Plug 'echasnovski/mini.nvim'
+
 else
     " Vim only ---------------------------------------------------------------
+
+    Plug 'tomtom/tcomment_vim'
 
     " NERDTree
     Plug 'scrooloose/nerdtree'

@@ -172,6 +172,7 @@ nmap <leader>m :ToggleMouse<CR>
 
 nnoremap <C-B> : Buffers<CR>
 nnoremap <C-P> : History<CR>
+nnoremap <C-F> : Files<CR>
 
 if has("gui_running")
     set guifont=Andale\ Mono
@@ -182,21 +183,8 @@ if has("gui_running")
     vnoremap <C-d> "+d
 endif
 
-function! Preview(args, ...)
-  if filereadable(a:args)
-    let l:source = 'bat --plain --color=always '.a:args
-  else
-    let l:source = 'ls -lah --color=always '.a:args
-  endif
-  call fzf#run({
-  \ 'source': l:source,
-  \ 'sink': 'edit '.a:args.'"',
-  \ 'options': '--ansi --layout=reverse-list --prompt "['.a:args.']> "',
-  \ 'window': {'width': 0.9, 'height': 0.9, 'border': 'rounded'}
-  \})
-endfunction
-
-command! -bang -nargs=1 Preview call Preview(<q-args>, <bang>0)
+" fzf - Preview and Ag commands
+source ~/.vim/fzf.vim
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
@@ -208,14 +196,15 @@ if has('nvim')
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
     :lua require('leap').add_default_mappings()
 
-    command! -bang -nargs=* Ag
-      \ call fzf#vim#grep(
-      \   'ag --nogroup --column --color '.<q-args>, 0,
-      \   fzf#vim#with_preview(), <bang>0)
+    " mini-comment - replace tcomment_vim
+    :lua require('mini.comment').setup()
+
+    " mini-indentscope - ii scopre (vii, cii, dii)
+    " https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md
+    :lua require('mini.indentscope').setup({ draw = { animation = require('mini.indentscope').gen_animation.none() }})
 
     " autocmd StdinReadPre * let s:std_in=1
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
-
 else
     " Vim only ---------------------------------------------------------------
 
