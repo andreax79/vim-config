@@ -36,7 +36,7 @@ set undolevels=1000
 set undodir=~/.vim/undodir
 set timeoutlen=500
 " let g:mapleader = "\<Space>"
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 " set switchbuf=useopen
 set mouse=a                 " Automatically enable mouse usage
 if &term =~ '^screen'
@@ -66,6 +66,8 @@ set guioptions-=T
 set termguicolors
 " colorscheme dracula_bold
 colorscheme nord " (7/2022)
+let ayucolor="light"
+" colorscheme ayu " (5/2022)
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
@@ -169,6 +171,8 @@ nmap <leader>p :set paste!<CR>
 nmap <leader>y :YRShow<CR>
 " Toggle mouse
 nmap <leader>m :ToggleMouse<CR>
+" Aerial
+nmap <leader>a :AerialToggle!<CR>
 
 nnoremap <C-B> : Buffers<CR>
 nnoremap <C-P> : History<CR>
@@ -205,6 +209,8 @@ if has('nvim')
 
     " autocmd StdinReadPre * let s:std_in=1
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
+
+    :lua require('treesitter')
 else
     " Vim only ---------------------------------------------------------------
 

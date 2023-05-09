@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 " Plug 'chriskempson/base16-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 " Plug 'sjl/gundo.vim'
@@ -77,12 +78,6 @@ Plug 'airblade/vim-gitgutter'
 " Very Important Buffers
 " Plug 'andreax79/very-important-buffers.vim'
 
-" Languages
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'mxw/vim-jsx'
-Plug 'othree/html5.vim'
 " Vim indenter for standalone and embedded JavaScript and TypeScript
 Plug 'jason0x43/vim-js-indent'
 "  Generate Python docstring to your Python script file
@@ -143,6 +138,11 @@ if has('nvim')
 
     Plug 'echasnovski/mini.nvim'
 
+    " nvim-treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    " A code outline window for skimming and quick navigation
+    Plug 'stevearc/aerial.nvim'
 else
     " Vim only ---------------------------------------------------------------
 
@@ -156,4 +156,12 @@ else
 
     " Vim motions on speed!
     Plug 'Lokaltog/vim-easymotion'
+
+    " Languages
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'ekalinin/Dockerfile.vim'
+    Plug 'mxw/vim-jsx'
+    Plug 'othree/html5.vim'
+
 endif
