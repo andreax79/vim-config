@@ -65,9 +65,10 @@ set guioptions-=T
 " let g:dracula_colorterm = 0
 set termguicolors
 " colorscheme dracula_bold
-colorscheme nord " (7/2022)
-let ayucolor="light"
+" colorscheme nord " (7/2022)
+" let ayucolor="light"
 " colorscheme ayu " (5/2022)
+colorscheme onehalfdark " (6/2023)
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
