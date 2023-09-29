@@ -1,0 +1,88 @@
+diff --git a/bundles.vim b/bundles.vim
+index e0dc3cb..bfb20ad 100644
+--- a/bundles.vim
++++ b/bundles.vim
+@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline'
+ " Plug 'dracula/vim', { 'as': 'dracula' }
+ Plug 'arcticicestudio/nord-vim'
+ Plug 'ayu-theme/ayu-vim'
++Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+ 
+ " Gundo.vim is Vim plugin to visualize your Vim undo tree.
+ " Plug 'sjl/gundo.vim'
+@@ -143,6 +144,20 @@ if has('nvim')
+ 
+     " A code outline window for skimming and quick navigation
+     Plug 'stevearc/aerial.nvim'
++
++    " LSP Support
++    Plug 'neovim/nvim-lspconfig'                           " Required
++    Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
++    Plug 'williamboman/mason-lspconfig.nvim'               " Optional
++
++    " Autocompletion
++    Plug 'hrsh7th/nvim-cmp'         " Required
++    Plug 'hrsh7th/cmp-nvim-lsp'     " Required
++    Plug 'L3MON4D3/LuaSnip'         " Required
++
++    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
++
++    Plug 'goolord/alpha-nvim'
+ else
+     " Vim only ---------------------------------------------------------------
+ 
+diff --git a/lua/neo_tree.lua b/lua/neo_tree.lua
+index 6b274e9..182ad92 100644
+--- a/lua/neo_tree.lua
++++ b/lua/neo_tree.lua
+@@ -7,6 +7,7 @@ local neo_tree = require('neo-tree')
+ neo_tree.setup({
+     enable_git_status = true,
+     filesystem = {
++        bind_to_cwd = false,
+         hijack_netrw_behavior = "open_current",
+         window = {
+             mappings = {
+diff --git a/vimrc b/vimrc
+index 56a2b09..78fbf83 100644
+--- a/vimrc
++++ b/vimrc
+@@ -65,9 +65,10 @@ set guioptions-=T
+ " let g:dracula_colorterm = 0
+ set termguicolors
+ " colorscheme dracula_bold
+-colorscheme nord " (7/2022)
++" colorscheme nord " (7/2022)
+ let ayucolor="light"
+ " colorscheme ayu " (5/2022)
++colorscheme catppuccin_frappe " (5/2022)
+ 
+ " Force saving files that require root permission
+ cmap w!! %!sudo tee > /dev/null %
+@@ -190,6 +191,8 @@ endif
+ " fzf - Preview and Ag commands
+ source ~/.vim/fzf.vim
+ 
++autocmd BufNewFile,BufRead *.mtl set syntax=lisp
++
+ if has('nvim')
+     " Neovim only ------------------------------------------------------------
+ 
+@@ -210,7 +213,17 @@ if has('nvim')
+     " autocmd StdinReadPre * let s:std_in=1
+     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
+ 
++    " Treesitter
+     :lua require('treesitter')
++
++    " LSP
++    " <C-]> to jump to the definition
++    :lua require('lsp')
++
++    :lua require'alpha'.setup(require'alpha.themes.dashboard'.config)
++
++    :lua require('greeter')
++
+ else
+     " Vim only ---------------------------------------------------------------
+ 

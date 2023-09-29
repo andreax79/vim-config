@@ -17,9 +17,10 @@ Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'chriskempson/base16-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 " Plug 'ayu-theme/ayu-vim'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 " Plug 'sjl/gundo.vim'
@@ -144,6 +145,20 @@ if has('nvim')
 
     " A code outline window for skimming and quick navigation
     Plug 'stevearc/aerial.nvim'
+
+    " LSP Support
+    Plug 'neovim/nvim-lspconfig'                           " Required
+    Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
+    Plug 'williamboman/mason-lspconfig.nvim'               " Optional
+
+    " Autocompletion
+    Plug 'hrsh7th/nvim-cmp'         " Required
+    Plug 'hrsh7th/cmp-nvim-lsp'     " Required
+    Plug 'L3MON4D3/LuaSnip'         " Required
+
+    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+
+    Plug 'goolord/alpha-nvim'
 else
     " Vim only ---------------------------------------------------------------
 

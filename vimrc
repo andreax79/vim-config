@@ -65,10 +65,15 @@ set guioptions-=T
 " let g:dracula_colorterm = 0
 set termguicolors
 " colorscheme dracula_bold
+" colorscheme onehalfdark " (6/2023)
 " colorscheme nord " (7/2022)
 " let ayucolor="light"
 " colorscheme ayu " (5/2022)
-colorscheme onehalfdark " (6/2023)
+" colorscheme dracula_bold
+" colorscheme nord " (7/2022)
+" let ayucolor="light"
+" colorscheme ayu " (5/2022)
+colorscheme catppuccin_frappe " (5/2022)
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
@@ -191,6 +196,8 @@ endif
 " fzf - Preview and Ag commands
 source ~/.vim/fzf.vim
 
+autocmd BufNewFile,BufRead *.mtl set syntax=lisp
+
 if has('nvim')
     " Neovim only ------------------------------------------------------------
 
@@ -211,7 +218,17 @@ if has('nvim')
     " autocmd StdinReadPre * let s:std_in=1
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
 
+    " Treesitter
     :lua require('treesitter')
+
+    " LSP
+    " <C-]> to jump to the definition
+    :lua require('lsp')
+
+    :lua require'alpha'.setup(require'alpha.themes.dashboard'.config)
+
+    :lua require('greeter')
+
 else
     " Vim only ---------------------------------------------------------------
 

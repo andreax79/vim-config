@@ -7,6 +7,7 @@ local neo_tree = require('neo-tree')
 neo_tree.setup({
     enable_git_status = true,
     filesystem = {
+        bind_to_cwd = false,
         hijack_netrw_behavior = "open_current",
         window = {
             mappings = {
