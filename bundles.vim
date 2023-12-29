@@ -128,7 +128,7 @@ if has('nvim')
     " Neo-Tree
     Plug 'MunifTanjim/nui.nvim'
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-neo-tree/neo-tree.nvim'
+    Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v3.x' }
     " NvimTree
     " Plug 'nvim-tree/nvim-tree.lua'
     " Plug 'nvim-tree/nvim-web-devicons

@@ -113,6 +113,7 @@ let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_enable_highlighting = 0
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.mtl set ft=lisp
 
 " Intellisense
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -212,6 +213,9 @@ if has('nvim')
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
 
     :lua require('treesitter')
+
+    nmap <leader>t :Neotree filesystem toggle left<CR>
+    nmap <leader>g :Neotree git_status toggle float<CR>
 else
     " Vim only ---------------------------------------------------------------
 

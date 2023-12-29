@@ -1,5 +1,5 @@
-vim.g.loaded_netrw = 0
-vim.g.loaded_netrwPlugin = 0
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 local neo_tree = require('neo-tree')
@@ -20,7 +20,6 @@ neo_tree.setup({
                 ["s"] = "search_ag",   -- search with ag
                 ["p"] = "preview",
                 ["P"] = "preview",
-                ["\\"] = "preview",
             },
         },
         commands = {
@@ -42,7 +41,11 @@ neo_tree.setup({
         },
     },
     buffers = {
-        follow_current_file = false,
+        follow_current_file = {
+            enabled = false, -- This will find and focus the file in the active buffer every time
+            --               -- the current file is changed while the tree is open.
+            leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+        },
     },
     default_component_configs = {
         indent = {
@@ -53,6 +56,23 @@ neo_tree.setup({
         },
         icon = {
             default = "",
+        },
+        name = {
+            trailing_slash = true,
+            use_git_status_colors = true,
+            highlight = "NeoTreeFileName",
+        },
+        file_size = {
+            enabled = true,
+            required_width = 64, -- min width of window required to show this column
+        },
+        type = {
+            enabled = true,
+            required_width = 122, -- min width of window required to show this column
+        },
+        last_modified = {
+            enabled = true,
+            required_width = 88, -- min width of window required to show this column
         },
         git_status = {
             symbols = {

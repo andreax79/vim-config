@@ -10,8 +10,10 @@ if command -v nvim &> /dev/null; then
   NVIM_HOME=${XDG_CONFIG_HOME:=~/.config}/nvim
   mkdir -p ${NVIM_HOME}
   cp -a init.vim ${NVIM_HOME}
+  TS_UPDATE='+TSUpdate'
 else
   VI='vim'
+  TS_UPDATE=''
 fi
 # Install/update/remove bundles
-$VI -u install.vim '+PlugUpgrade' '+PlugInstall!' '+PlugUpdate' '+qa!'
+$VI -u install.vim '+PlugUpgrade' '+PlugInstall!' '+PlugUpdate' ${TS_UPDATE} '+qa!'
