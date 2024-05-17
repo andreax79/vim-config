@@ -157,14 +157,7 @@ set shortmess+=l
 " hide ~ (non text)
 ":hi NonText guifg=bg
 
-" Open buffers
-nmap <leader>b :Buffers<CR>
-" Files
-nmap <leader>f :Files<CR>
-" File history
-nmap <leader>h :History<CR>
-" Git commits for the current buffer
-nmap <leader>c :BCommits<CR>
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 " Shortcut to rapidly toggle `set paste`
@@ -176,9 +169,6 @@ nmap <leader>m :ToggleMouse<CR>
 " Aerial
 nmap <leader>a :AerialToggle!<CR>
 
-nnoremap <C-B> : Buffers<CR>
-nnoremap <C-P> : History<CR>
-nnoremap <C-F> : Files<CR>
 
 if has("gui_running")
     set guifont=Andale\ Mono
@@ -189,14 +179,28 @@ if has("gui_running")
     vnoremap <C-d> "+d
 endif
 
-" fzf - Preview and Ag commands
-source ~/.vim/fzf.vim
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
 
     " Neo Tree
     :lua require('neo_tree')
+    " Telescope
+    :lua require('telescope_config')
+
+    " Files
+    nmap <leader>f <cmd>Telescope find_files<cr>
+    nnoremap <C-F> <cmd>Telescope find_files<cr>
+    " History
+    nmap <leader>h <cmd>Telescope oldfiles<cr>
+    nnoremap <C-P> <cmd>Telescope oldfiles<cr>
+    " Open buffers
+    nmap <leader>b <cmd>Telescope buffers<cr>
+    nnoremap <C-B> <cmd>Telescope buffers<cr>
+    " Git commits for the current buffer
+    nmap <leader>c <cmd>Telescope git_bcommits<cr>
+    " Live grep
+    nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
     " Leap is general-purpose motion plugin
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
@@ -216,8 +220,33 @@ if has('nvim')
 
     nmap <leader>t :Neotree filesystem toggle left<CR>
     nmap <leader>g :Neotree git_status toggle float<CR>
+
+    function! Ag(args, b)
+        " If no pattern is provided, search for the word under the cursor
+        let b:grep_args = empty(a:args) ? expand("<cword>") : a:args . join(a:000, ' ')
+        :lua require("telescope").extensions.ag.search(vim.api.nvim_buf_get_var(0, 'grep_args'))
+    endfunction
+
+    command! -bang -nargs=* -complete=file Ag call Ag(<q-args>, <bang>0)
+
+    :lua vim.api.nvim_set_hl(0, "NormalFloat", {bg="#282c34"})
 else
     " Vim only ---------------------------------------------------------------
+
+    " fzf - Preview and Ag commands
+    source ~/.vim/fzf.vim
+
+    " Files
+    nmap <leader>f :Files<CR>
+    nnoremap <C-F> : Files<CR>
+    " File history
+    nmap <leader>h :History<CR>
+    nnoremap <C-P> : History<CR>
+    " Open buffers
+    nmap <leader>b :Buffers<CR>
+    nnoremap <C-B> : Buffers<CR>
+    " Git commits for the current buffer
+    nmap <leader>c :BCommits<CR>
 
     " NERDTree
     source ~/.vim/nerdtree.vim

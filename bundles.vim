@@ -118,12 +118,11 @@ Plug 'christoomey/vim-tmux-navigator'
 " repeat.vim: enable repeating supported plugin maps with "."
 Plug 'tpope/vim-repeat'
 
-" ZFZ Integration
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
+    " Telescope
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 
     " Neo-Tree
     Plug 'MunifTanjim/nui.nvim'
@@ -146,6 +145,10 @@ if has('nvim')
     Plug 'stevearc/aerial.nvim'
 else
     " Vim only ---------------------------------------------------------------
+
+    " ZFZ Integration
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
 
     Plug 'tomtom/tcomment_vim'
 

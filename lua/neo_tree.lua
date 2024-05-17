@@ -18,8 +18,8 @@ neo_tree.setup({
                 ["w"] = "noop", -- disable open with window picker
                 ["!"] = "run_command", -- run commnad
                 ["s"] = "search_ag",   -- search with ag
-                ["p"] = "preview",
-                ["P"] = "preview",
+                ["p"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+                ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
             },
         },
         commands = {
@@ -33,11 +33,11 @@ neo_tree.setup({
                 local path = node:get_id()
                 vim.api.nvim_input(":Ag  " .. path .. "<Home><Right><Right><Right>")
             end,
-            preview = function(state)
-                local node = state.tree:get_node()
-                local path = node.path
-                vim.cmd("Preview " .. path)
-            end
+            -- preview = function(state)
+            --     local node = state.tree:get_node()
+            --     local path = node.path
+            --     vim.cmd("Preview " .. path)
+            -- end
         },
     },
     buffers = {
