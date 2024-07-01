@@ -17,9 +17,10 @@ Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'chriskempson/base16-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'whatyouhide/vim-gotham'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 " Plug 'sjl/gundo.vim'

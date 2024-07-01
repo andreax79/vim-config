@@ -68,7 +68,8 @@ set termguicolors
 " colorscheme nord " (7/2022)
 " let ayucolor="light"
 " colorscheme ayu " (5/2022)
-colorscheme onehalfdark " (6/2023)
+" colorscheme onehalfdark " (6/2023)
+colorscheme gotham " (7/2024)
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
@@ -212,6 +213,9 @@ if has('nvim')
     " mini-indentscope - ii scopre (vii, cii, dii)
     " https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md
     :lua require('mini.indentscope').setup({ draw = { animation = require('mini.indentscope').gen_animation.none() }})
+
+    " mini-autopair
+    :lua require('mini.pairs').setup()
 
     " autocmd StdinReadPre * let s:std_in=1
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
