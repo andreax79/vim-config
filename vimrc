@@ -234,6 +234,9 @@ if has('nvim')
     command! -bang -nargs=* -complete=file Ag call Ag(<q-args>, <bang>0)
 
     :lua vim.api.nvim_set_hl(0, "NormalFloat", {bg="#282c34"})
+
+    " Super fast git decorations implemented purely in Lua
+    :lua require('gitsigns').setup()
 else
     " Vim only ---------------------------------------------------------------
 

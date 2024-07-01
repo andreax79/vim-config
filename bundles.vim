@@ -66,7 +66,6 @@ Plug 'tpope/vim-surround'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'int3/vim-extradite'
-Plug 'airblade/vim-gitgutter'
 
 " UltiSnips - The ultimate snippet solution for Vim
 " Plug 'SirVer/ultisnips'
@@ -119,7 +118,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " repeat.vim: enable repeating supported plugin maps with "."
 Plug 'tpope/vim-repeat'
 
-
 if has('nvim')
     " Neovim only ------------------------------------------------------------
     " Telescope
@@ -144,6 +142,9 @@ if has('nvim')
 
     " A code outline window for skimming and quick navigation
     Plug 'stevearc/aerial.nvim'
+
+    " Git integration for buffers
+    Plug 'lewis6991/gitsigns.nvim'
 else
     " Vim only ---------------------------------------------------------------
 
@@ -169,4 +170,6 @@ else
     Plug 'mxw/vim-jsx'
     Plug 'othree/html5.vim'
 
+    " Git
+    Plug 'airblade/vim-gitgutter'
 endif
