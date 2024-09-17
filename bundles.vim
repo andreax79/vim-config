@@ -8,11 +8,8 @@
 Plug 'tpope/vim-sensible'
 " Plug 'Raimondi/delimitMate'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-
 " Colorschemes
-" Plug 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'chriskempson/base16-vim'
@@ -21,6 +18,8 @@ Plug 'vim-airline/vim-airline'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'whatyouhide/vim-gotham'
+Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'folke/tokyonight.nvim'
 
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 " Plug 'sjl/gundo.vim'
@@ -145,6 +144,12 @@ if has('nvim')
 
     " Git integration for buffers
     Plug 'lewis6991/gitsigns.nvim'
+
+    " Lualine
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'nvim-tree/nvim-web-devicons'
+
+    Plug 'github/copilot.vim'
 else
     " Vim only ---------------------------------------------------------------
 
@@ -169,6 +174,9 @@ else
     Plug 'ekalinin/Dockerfile.vim'
     Plug 'mxw/vim-jsx'
     Plug 'othree/html5.vim'
+
+    " Airline
+    Plug 'vim-airline/vim-airline'
 
     " Git
     Plug 'airblade/vim-gitgutter'

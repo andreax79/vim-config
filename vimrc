@@ -43,9 +43,6 @@ if &term =~ '^screen'
   set ttymouse=xterm2       " tmux knows the extended mouse mode
 endif
 
-" Airline
-source ~/.vim/airline.vim
-
 " let g:nord_uniform_status_lines = 0
 
 " hide left scrollbar, menu, and toolbar in gui
@@ -69,7 +66,9 @@ set termguicolors
 " let ayucolor="light"
 " colorscheme ayu " (5/2022)
 " colorscheme onehalfdark " (6/2023)
-colorscheme gotham " (7/2024)
+" colorscheme gotham " (7/2024)
+" colorscheme oxocarbon " (7/2024)
+colorscheme tokyonight-night " (9/2024)
 
 " Force saving files that require root permission
 cmap w!! %!sudo tee > /dev/null %
@@ -171,21 +170,16 @@ nmap <leader>m :ToggleMouse<CR>
 nmap <leader>a :AerialToggle!<CR>
 
 
-if has("gui_running")
-    set guifont=Andale\ Mono
-    set background=dark
-    colorscheme dracula_bold
-    inoremap <C-v> <ESC>"+pa
-    vnoremap <C-c> "+y
-    vnoremap <C-d> "+d
-endif
-
+autocmd BufNewFile,BufRead *.cshtml set filetype=html.cshtml.razor
+autocmd BufNewFile,BufRead *.razor set filetype=html.cshtml.razor
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
 
     " Neo Tree
     :lua require('neo_tree')
+    " Lualine
+    :lua require('lualine_config')
     " Telescope
     :lua require('telescope_config')
 
@@ -215,7 +209,7 @@ if has('nvim')
     :lua require('mini.indentscope').setup({ draw = { animation = require('mini.indentscope').gen_animation.none() }})
 
     " mini-autopair
-    :lua require('mini.pairs').setup()
+    " :lua require('mini.pairs').setup()
 
     " autocmd StdinReadPre * let s:std_in=1
     " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | e . | endif
@@ -239,6 +233,9 @@ if has('nvim')
     :lua require('gitsigns').setup()
 else
     " Vim only ---------------------------------------------------------------
+
+    " Airline
+    source ~/.vim/airline.vim
 
     " fzf - Preview and Ag commands
     source ~/.vim/fzf.vim
