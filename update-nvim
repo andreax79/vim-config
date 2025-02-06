@@ -1,5 +1,5 @@
-#!/bin/bash -
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+#!/bin/bash -e
+curl -L https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.appimage -o nvim.appimage
 if [ -f ~/.local/bin/nvim.appimage ]; then
   cp  ~/.local/bin/nvim.appimage  ~/.local/bin/nvim.appimage.old
 fi
