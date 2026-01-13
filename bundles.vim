@@ -117,6 +117,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " repeat.vim: enable repeating supported plugin maps with "."
 Plug 'tpope/vim-repeat'
 
+Plug 'andreax79/vim-metal-syntax'
+
 if has('nvim')
     " Neovim only ------------------------------------------------------------
     " Telescope
@@ -132,7 +134,7 @@ if has('nvim')
 
     " Leap is general-purpose motion plugin
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
-    Plug 'ggandor/leap.nvim'
+    " Plug 'ggandor/leap.nvim'
 
     Plug 'echasnovski/mini.nvim'
 
@@ -149,7 +151,10 @@ if has('nvim')
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'nvim-tree/nvim-web-devicons'
 
+    " Copilot
     Plug 'github/copilot.vim'
+    Plug 'CopilotC-Nvim/CopilotChat.nvim'
+
 else
     " Vim only ---------------------------------------------------------------
 
