@@ -151,6 +151,9 @@ if has('nvim')
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'nvim-tree/nvim-web-devicons'
 
+    " Language
+    Plug 'carlsmedstad/vim-bicep'
+
     " Copilot
     Plug 'github/copilot.vim'
     Plug 'olimorris/codecompanion.nvim'
