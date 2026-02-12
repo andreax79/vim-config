@@ -113,7 +113,6 @@ let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_enable_highlighting = 0
 autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.mtl set ft=lisp
 
 " Intellisense
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -172,6 +171,7 @@ nmap <leader>a :AerialToggle!<CR>
 
 autocmd BufNewFile,BufRead *.cshtml set filetype=html.cshtml.razor
 autocmd BufNewFile,BufRead *.razor set filetype=html.cshtml.razor
+autocmd BufNewFile,BufRead *.forth set syntax=forth
 
 if has('nvim')
     " Neovim only ------------------------------------------------------------
@@ -199,7 +199,7 @@ if has('nvim')
 
     " Leap is general-purpose motion plugin
     " Initiate the search in the forward (s) or backward (S) direction, or in the other windows (gs)
-    :lua require('leap').add_default_mappings()
+    " :lua require('leap').add_default_mappings()
 
     " mini-comment - replace tcomment_vim
     :lua require('mini.comment').setup()
@@ -231,6 +231,12 @@ if has('nvim')
 
     " Super fast git decorations implemented purely in Lua
     :lua require('gitsigns').setup()
+
+    " :lua require('CopilotChat').setup()
+    :lua require("codecompanion").setup({ side = "right" })
+
+    autocmd VimEnter * Neotree
+
 else
     " Vim only ---------------------------------------------------------------
 

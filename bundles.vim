@@ -122,7 +122,7 @@ Plug 'andreax79/vim-metal-syntax'
 if has('nvim')
     " Neovim only ------------------------------------------------------------
     " Telescope
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+    Plug 'nvim-telescope/telescope.nvim'
 
     " Neo-Tree
     Plug 'MunifTanjim/nui.nvim'
@@ -153,7 +153,7 @@ if has('nvim')
 
     " Copilot
     Plug 'github/copilot.vim'
-    Plug 'CopilotC-Nvim/CopilotChat.nvim'
+    Plug 'olimorris/codecompanion.nvim'
 
 else
     " Vim only ---------------------------------------------------------------
