@@ -1,14 +1,12 @@
 Installation:
 
 ```bash
-    git clone https://github.com/andreax79/vim-config.git ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ~/.vim/update
+    git clone https://github.com/andreax79/vim-config.git ~/.config/nvim
 ```
 
-Install/upgrade bundles:
+Install/upgrade Neovim:
 
 ```bash
-    cd ~/.vim
-    ./update
+    cd ~/.config/nvim
+    ./update-nvim
 ```

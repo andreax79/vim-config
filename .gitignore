@@ -8,3 +8,4 @@ autoload
 /autoload/*
 *.swp
 *.un~
+lazy-lock.json
