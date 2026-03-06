@@ -28,9 +28,12 @@ vim.opt.expandtab = true -- insert space characters whenever the tab key is pres
 vim.opt.smarttab = true -- <Tab> at the start of a line uses shiftwidth
 
 -- Sync clipboard between OS and NVIM
-vim.schedule(function()
-    vim.o.clipboard = "unnamedplus"
-end)
+-- vim.schedule(function()
+--     vim.o.clipboard = "unnamedplus"
+-- end)
+-- vim.keymap.set({'n', 'v'}, 'y', '"+y', { noremap = true, desc = 'Yank to system clipboard' })
+-- vim.keymap.set({'n', 'v'}, 'p', '"+p', { noremap = true, desc = 'Paste from system clipboard' })
+-- vim.keymap.set({'n', 'v'}, 'P', '"+P', { noremap = true, desc = 'Paste from system clipboard (before)' })
 
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
