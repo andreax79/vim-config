@@ -131,25 +131,26 @@ return {
                         then
                             return
                         end
-                    end
+                end
 
-                    client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
-                        runtime = {
-                            version = "LuaJIT",
-                            path = { "lua/?.lua", "lua/?/init.lua" },
-                        },
-                        workspace = {
-                            checkThirdParty = false,
-                            -- NOTE: this is a lot slower and will cause issues when working on your own configuration.
-                            --  See https://github.com/neovim/nvim-lspconfig/issues/3189
-                            library = vim.api.nvim_get_runtime_file("", true),
-                        },
-                    })
-                end,
-                settings = {
-                    Lua = {},
-                },
-            })
-            vim.lsp.enable("lua_ls")
-        end,
-    }
+                client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
+                    runtime = {
+                        version = "LuaJIT",
+                        path = { "lua/?.lua", "lua/?/init.lua" },
+                    },
+                    workspace = {
+                        checkThirdParty = false,
+                        -- NOTE: this is a lot slower and will cause issues when working on your own configuration.
+                        --  See https://github.com/neovim/nvim-lspconfig/issues/3189
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                })
+            end,
+            settings = {
+                Lua = {},
+            },
+        })
+
+        vim.lsp.enable("lua_ls")
+    end,
+}
