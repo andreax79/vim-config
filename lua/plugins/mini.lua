@@ -12,6 +12,12 @@ return {
             },
         })
 
+        -- Git integration
+        require('mini.git').setup()
+
+        -- Diff view
+        require('mini.diff').setup()
+
         -- mini-autopair
         -- require('mini.pairs').setup()
 
